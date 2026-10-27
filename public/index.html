@@ -932,24 +932,24 @@ body{background:linear-gradient(180deg,#e8eef4 0%,#f8f6f0 38%,#f2f7f4 100%);colo
 <p>Uma faixa do repertório é sorteada ao abrir o site. Se o navegador bloquear a reprodução automática, pressione <strong>Reproduzir</strong>. Escolha outra obra na lista suspensa.</p>
 <label for="oraculo-music-select"><strong>Escolha a composição</strong></label>
 <select id="oraculo-music-select" style="display:block;width:100%;padding:12px;margin:10px 0;border:1px solid #af9b71;border-radius:8px;font:16px Segoe UI,Arial,sans-serif">
-<option value="freemann">1 — Der freie Mann (Maurerfragen) — Beethoven, WoO 117</option>
-<option value="opferlied">2 — Opferlied (Bei der Aufnahme eines Maurers) — Beethoven, WoO 126</option>
-<option value="mozartOverture"> 3 — A Flauta Mágica: abertura (Mozart, 1791)</option>
-<option value="priests"> 4 — A Flauta Mágica: Marcha dos Sacerdotes (Mozart, 1791)</option>
-<option value="magic2"> 5 — A Flauta Mágica: abertura, outra gravação (Mozart)</option>
-<option value="sun"> 6 — A Flauta Mágica: Die Strahlen der Sonne (Mozart)</option>
-<option value="portrait"> 7 — A Flauta Mágica: Dies Bildnis (Mozart)</option>
-<option value="queen"> 8 — A Flauta Mágica: Der Hölle Rache (Mozart)</option>
-<option value="requiem01">9 — Réquiem K.626: Introitus — Requiem aeternam</option>
-<option value="requiem02">10 — Réquiem K.626: Kyrie</option>
-<option value="requiem03">11 — Réquiem K.626: Tuba mirum</option>
-<option value="requiem04">12 — Réquiem K.626: Rex tremendae</option>
-<option value="requiem05">13 — Réquiem K.626: Recordare</option>
-<option value="requiem06">14 — Réquiem K.626: Confutatis</option>
-<option value="requiem07">15 — Réquiem K.626: Lacrimosa</option>
-<option value="requiem08">16 — Réquiem K.626: Domine Jesu Christe</option>
-<option value="requiem09">17 — Réquiem K.626: Hostias</option>
-<option value="requiem10">18 — Réquiem K.626: Sanctus</option>
+<option value="freemann">1 — Der freie Mann, WoO 117 — Beethoven (adaptação maçônica: Maurerfragen)</option>
+<option value="opferlied">2 — Opferlied, WoO 126 — Beethoven (adaptação maçônica: Bei der Aufnahme eines Maurers)</option>
+<option value="mozartOverture">3 — Die Zauberflöte, K.620 — Abertura (Mozart)</option>
+<option value="priests">4 — Die Zauberflöte, K.620 — Marcha dos Sacerdotes (Mozart)</option>
+<option value="magic2">5 — Die Zauberflöte, K.620 — Abertura, outra interpretação (Mozart)</option>
+<option value="sun">6 — Die Zauberflöte, K.620 — Die Strahlen der Sonne (Mozart)</option>
+<option value="portrait">7 — Die Zauberflöte, K.620 — Dies Bildnis ist bezaubernd schön (Mozart)</option>
+<option value="queen">8 — Die Zauberflöte, K.620 — Der Hölle Rache (Mozart)</option>
+<option value="requiem01">9 — Requiem, K.626 — Introitus: Requiem aeternam</option>
+<option value="requiem02">10 — Requiem, K.626 — Kyrie</option>
+<option value="requiem03">11 — Requiem, K.626 — Tuba mirum</option>
+<option value="requiem04">12 — Requiem, K.626 — Rex tremendae</option>
+<option value="requiem05">13 — Requiem, K.626 — Recordare</option>
+<option value="requiem06">14 — Requiem, K.626 — Confutatis</option>
+<option value="requiem07">15 — Requiem, K.626 — Lacrimosa</option>
+<option value="requiem08">16 — Requiem, K.626 — Domine Jesu Christe</option>
+<option value="requiem09">17 — Requiem, K.626 — Hostias</option>
+<option value="requiem10">18 — Requiem, K.626 — Sanctus</option>
 </select>
 <div style="display:flex;flex-wrap:wrap;gap:8px">
 <button type="button" id="oraculo-music-play" class="eixo-consulta">▶ Reproduzir</button>
@@ -966,7 +966,7 @@ body{background:linear-gradient(180deg,#e8eef4 0%,#f8f6f0 38%,#f2f7f4 100%);colo
 <section id="oraculo-admin-inline"><h2>Administração do Oráculo</h2><button type="button" id="oraAdminToggle" aria-expanded="false" aria-controls="oraAdminHidden">Mostrar administração</button><div id="oraAdminHidden" hidden>
 <p>Área exclusiva. A senha é verificada pelo servidor e não é armazenada no navegador.</p><form id="oraAdminLogin"><label for="oraInlinePassword">Senha do administrador:</label><input id="oraInlinePassword" type="password" required minlength="24" autocomplete="off"><button type="submit">Entrar</button><button type="button" id="oraInlineEye" aria-label="Mostrar ou ocultar senha">Mostrar/ocultar senha</button></form>
 <p id="oraInlineMessage" role="status"></p><div id="oraInlinePanel" hidden><button type="button" id="oraInlineRefresh">Atualizar solicitações</button><button type="button" id="oraInlineLogout">Sair</button><div id="oraInlineRequests"></div>
-<h3>Emitir acesso após conferir recebimento</h3><form id="oraInlineIssue"><input id="oraInlineEmail" type="email" required placeholder="E-mail do assinante"><input id="oraInlineRef" required minlength="6" maxlength="120" placeholder="Referência da transação"><label><input id="oraInlineConfirmed" type="checkbox" required> Confirmo ter verificado o pagamento no banco</label><button type="submit">Emitir código de acesso</button></form><pre id="oraInlineIssued"></pre></div></div></section>
+<h3>Minha consulta ao Oráculo</h3><p>Área exclusiva do administrador. Faça sua própria pergunta e receba a resposta com fontes verificáveis, diretamente nesta página.</p><label for="oraInlineQuestion">Digite sua consulta</label><textarea id="oraInlineQuestion" maxlength="12000" rows="5" style="display:block;width:100%;box-sizing:border-box;font:16px Segoe UI,Arial,sans-serif;padding:12px;border-radius:8px" placeholder="Escreva sua pergunta de pesquisa..."></textarea><button type="button" id="oraInlineAsk">GERAR MINHA CONSULTA</button><p id="oraInlineAskStatus" role="status"></p><pre id="oraInlineAnswer" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre><div id="oraInlineSources"></div><hr style="margin:20px 0;border:0;border-top:1px solid #6d8191"><h3>Emitir acesso após conferir recebimento</h3><form id="oraInlineIssue"><input id="oraInlineEmail" type="email" required placeholder="E-mail do assinante"><input id="oraInlineRef" required minlength="6" maxlength="120" placeholder="Referência da transação"><label><input id="oraInlineConfirmed" type="checkbox" required> Confirmo ter verificado o pagamento no banco</label><button type="submit">Emitir código de acesso</button></form><pre id="oraInlineIssued"></pre></div></div></section>
 <script defer src="/oraculo-administracao-inline.js"></script>
 <script defer src="/oraculo-eixos.js"></script>
 <section class="oraculo-hero" id="eleicoes-2026-inicio" aria-labelledby="oraculo-titulo">
