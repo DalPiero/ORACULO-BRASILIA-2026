@@ -20,6 +20,7 @@ jobs:
           node --check public/oraculo-eixos.js
           node --check public/oraculo-administracao-inline.js
           node --check public/oraculo-musica.js
+          node --check public/oraculo-relatorios.js
       - name: Check HTTP health and authentication
         run: |
           PORT=3000 npm start > /tmp/oraculo.log 2>&1 &
