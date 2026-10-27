@@ -1,0 +1,3280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta
+    name="description"
+    content="Painel cívico-filosófico e estúdio visual institucional do Professor Dr. Fadal, com perguntas, banners, caligramas e análises verificáveis."
+  >
+  <meta name="theme-color" content="#071b31">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <meta property="og:locale" content="pt_BR">
+  <meta
+    property="og:title"
+    content="Oráculo da Brasília Brasileira | Professor Dr. Fadal"
+  >
+  <meta
+    property="og:description"
+    content="Conheça a história das eleições de 2026 no Brasil: calendário, instituições, fontes oficiais e análise documental."
+  >
+  <meta property="og:type" content="website">
+
+  <title>
+    ORÁCULO DA BRASÍLIA BRASILEIRA | Professor Dr. Fadal
+  </title>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Professor Dr. Fadal",
+      "alternateName": "@fadalprofdr",
+      "description": "Prof. Dr. Fadal | Escritor | Polímata - Metafísico | Inconformado. Artista/Designer/Joias/Artesão • Aulas • Mentoria • Simulador Eleição (Grátis 5/dia) | DM"
+    }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #f5fdf7 85%, #eafce5 100%);
+      color: #1a3c2f;
+      font-family: Georgia, serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 22px 15px 16px;
+      color: #1976d2;
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: #25a466;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    iframe {
+      display: block;
+      width: calc(100% - 24px);
+      max-width: 790px;
+      height: 410px;
+      margin: 22px auto 10px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 3px 24px #1976d22a;
+    }
+
+    .botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 11px 10px;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #388e3c 0%, #1976d2 100%);
+      color: #fff;
+      box-shadow: 0 3px 13px #1976d22a;
+      cursor: pointer;
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      transition:
+        background 0.18s,
+        transform 0.14s,
+        opacity 0.18s;
+    }
+
+    .botao:focus-visible,
+    .botao:hover {
+      background: linear-gradient(90deg, #1976d2 0%, #43a047 100%);
+      opacity: 0.96;
+      transform: translateY(-1px);
+    }
+
+    .bloco-botoes,
+    .linha-perguntas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .painel-perguntas {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 34px 3vw 22px;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 5px 24px #388e3c13;
+    }
+
+    .grupo-titulo {
+      margin: 23px 0 12px;
+      color: #0d47a1;
+      font-size: 1.16rem;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .botao-especial,
+    .pergunta {
+      flex: 1 1 280px;
+      min-width: 240px;
+      max-width: 330px;
+      margin-bottom: 5px;
+      padding: 12px 14px;
+      border: 1.7px solid #38a169;
+      border-radius: 11px;
+      background: #e9fbe5;
+      color: #205731;
+      box-shadow: 0 2px 12px #25a64710;
+      cursor: pointer;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
+      text-align: left;
+      transition:
+        background 0.2s,
+        color 0.2s,
+        border 0.2s,
+        transform 0.15s;
+    }
+
+    .pergunta {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 13px;
+      min-height: 185px;
+    }
+
+    .texto-pergunta {
+      display: block;
+      flex: 1;
+    }
+
+    .rodape-pergunta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 9px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(32, 87, 49, 0.24);
+    }
+
+    .acao-gpt,
+    .contador-acessos {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .acao-gpt {
+      flex: 1 1 auto;
+      background: #1976d2;
+      color: #fff;
+    }
+
+    .contador-acessos {
+      flex: 0 0 auto;
+      border: 1px solid #8fc69d;
+      background: #fff;
+      color: #174f2e;
+      white-space: nowrap;
+    }
+
+    .status-envio {
+      display: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fff;
+      color: #155724;
+      font-size: 0.92rem;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .status-envio.visivel {
+      display: block;
+    }
+
+    .status-envio.aviso {
+      background: #fff4d6;
+      color: #7a4300;
+    }
+
+    .pergunta-livre {
+      margin: 0 auto 30px;
+      padding: 22px;
+      border: 1.7px solid #38a169;
+      border-radius: 14px;
+      background: #f3fff1;
+      box-shadow: 0 2px 12px #25a64710;
+      text-align: left;
+    }
+
+    .pergunta-livre h2 {
+      margin: 0 0 9px;
+      color: #0d47a1;
+      font-size: 1.28rem;
+    }
+
+    .rotulo-pergunta-livre {
+      display: block;
+      margin-bottom: 9px;
+      color: #205731;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .campo-pergunta-livre {
+      display: block;
+      width: 100%;
+      min-height: 180px;
+      padding: 14px;
+      resize: vertical;
+      border: 1.7px solid #8fc69d;
+      border-radius: 10px;
+      outline: 0;
+      background: #fff;
+      color: #1a3c2f;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .campo-pergunta-livre:focus {
+      border-color: #1976d2;
+      box-shadow: 0 0 0 3px #1976d21f;
+    }
+
+    .apoio-pergunta-livre {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 8px;
+      color: #3f5f4b;
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+
+    .contador-palavras {
+      flex: 0 0 auto;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .rodape-pergunta-livre {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .botao-pergunta-livre {
+      min-height: 42px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 9px;
+      background: #1976d2;
+      color: #fff;
+      cursor: pointer;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      transition:
+        background 0.18s,
+        transform 0.14s;
+    }
+
+    .botao-pergunta-livre:focus-visible,
+    .botao-pergunta-livre:hover {
+      background: #125fae;
+      transform: translateY(-1px);
+    }
+
+    .status-pergunta-livre {
+      margin-top: 12px;
+    }
+
+    .botao-especial:focus-visible,
+    .botao-especial:hover,
+    .pergunta:focus-visible,
+    .pergunta:hover {
+      background: #d3f4d0;
+      color: #1d4c22;
+      transform: translateY(-1px);
+    }
+
+    .copiado {
+      border-color: #388e3c !important;
+      background: #bff0cb !important;
+      color: #1a3c2f !important;
+    }
+
+    .contador-principal {
+      display: block;
+      width: fit-content;
+      margin: 13px auto 0;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+      font-size: 0.83em;
+      letter-spacing: normal;
+      text-shadow: none;
+    }
+
+    .status-principal {
+      display: none;
+      margin-top: 10px;
+      color: #fff;
+      font-size: 0.78em;
+      line-height: 1.35;
+      letter-spacing: normal;
+    }
+
+    .status-principal.visivel {
+      display: block;
+    }
+
+    .botao-especial {
+      border: none;
+      background: #1976d2;
+      color: #fff;
+      text-align: center;
+    }
+
+    details {
+      margin: 18px 0 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #e8f5e9;
+    }
+
+    #botao-daltonismo-gpt {
+      margin: 14px auto 0;
+    }
+
+    #daltonismo-tooltip-gpt {
+      display: none;
+      position: absolute;
+      z-index: 30001;
+      min-width: 270px;
+      max-width: 355px;
+      padding: 17px 22px;
+      transform: translateX(-50%);
+      border: 2px solid #0057ff;
+      border-radius: 13px;
+      background: #f9fcff;
+      color: #17365d;
+      box-shadow: 0 2px 16px #0057ff22;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.45;
+      text-align: left;
+      pointer-events: none;
+    }
+
+    .message-box {
+      max-width: 700px;
+      margin: 22px auto 0;
+      padding: 19px 4vw;
+      border-left: 6px solid #66bb6a;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 10px #0001;
+    }
+
+    #bio-acessos {
+      max-width: 440px;
+      margin: 40px auto;
+      padding: 20px 24px;
+      border-radius: 16px;
+      background: #fff;
+      color: #1a3c2f;
+      box-shadow: 0 6px 16px #0001;
+      font-family: Georgia, serif;
+      text-align: center;
+    }
+
+    .btn-flutuante {
+      position: fixed;
+      right: 24px;
+      z-index: 10000;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      box-shadow: 0 4px 12px #0004;
+      cursor: pointer;
+      font-family: Georgia, serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .whatsapp {
+      bottom: 250px;
+      background: #25d366;
+    }
+
+    .youtube {
+      bottom: 300px;
+      background: red;
+    }
+
+    .codepen {
+      bottom: 350px;
+      background: #1a3c2f;
+    }
+
+    .banner-boas-vindas {
+      max-width: 900px;
+      margin: 28px auto;
+      padding: 18px 24px;
+      border-radius: 12px;
+      background: #e8f5e9;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .painel-perguntas {
+        margin: 20px 10px;
+        padding: 14px 12px;
+      }
+
+      .grupo-titulo {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 1.45rem;
+      }
+
+      iframe {
+        height: 260px;
+      }
+
+      .linha-perguntas {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .pergunta {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      .pergunta-livre {
+        padding: 16px;
+      }
+
+      .apoio-pergunta-livre,
+      .rodape-pergunta-livre {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .botao-pergunta-livre,
+      .rodape-pergunta-livre .contador-acessos {
+        width: 100%;
+      }
+
+      .botao {
+        width: calc(100% - 24px);
+        padding: 13px 16px;
+        font-size: 0.95rem;
+      }
+
+      .btn-flutuante {
+        right: 10px;
+        max-width: 175px;
+        padding: 8px 12px;
+        font-size: 12px;
+      }
+
+      .whatsapp {
+        bottom: 170px;
+      }
+
+      .youtube {
+        bottom: 215px;
+      }
+
+      .codepen {
+        bottom: 260px;
+      }
+    }
+
+    .painel-identidade-visual {
+      max-width: 1100px;
+      margin: 28px auto 10px;
+      padding: 30px 3vw 24px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #121212 0%, #1f1f1f 100%);
+      color: #fff;
+      box-shadow: 0 7px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .painel-identidade-visual h2 {
+      margin: 0 0 16px;
+      color: #d4af37;
+      font-size: 1.6rem;
+    }
+
+    .painel-identidade-visual p {
+      color: #f6f1e6;
+    }
+
+    .cartao-identidade {
+      max-width: 900px;
+      margin: 0 auto 18px;
+      padding: 18px 20px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .identidade-titulo {
+      margin: 0 0 6px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .identidade-usuario {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #d4af37;
+      letter-spacing: 0.03em;
+    }
+
+    .identidade-descricao {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .grid-diretrizes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .card-diretriz {
+      padding: 18px 18px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-diretriz h3 {
+      margin: 0 0 10px;
+      color: #d4af37;
+      font-size: 1.05rem;
+    }
+
+    .card-diretriz ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    .card-diretriz li + li {
+      margin-top: 6px;
+    }
+
+
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 40000;
+      padding: 10px 14px;
+      transform: translateY(-150%);
+      border-radius: 8px;
+      background: #121212;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .aviso-producao {
+      max-width: 900px;
+      margin: 18px auto;
+      padding: 12px 18px;
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      background: #fffdf5;
+      color: #453608;
+      font-weight: 700;
+    }
+
+    .estudio-visual {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 30px 3vw;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 5px 24px rgba(56, 142, 60, 0.08);
+      text-align: left;
+    }
+
+    .estudio-visual h2 {
+      margin: 0 0 8px;
+      color: #0d47a1;
+      text-align: center;
+    }
+
+    .estudio-visual > p {
+      max-width: 850px;
+      margin: 0 auto 22px;
+      color: #355644;
+      text-align: center;
+    }
+
+    .formulario-visual {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .campo-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .campo-visual.largura-total {
+      grid-column: 1 / -1;
+    }
+
+    .campo-visual label {
+      color: #1c4f31;
+      font-weight: 700;
+    }
+
+    .campo-visual input,
+    .campo-visual select,
+    .campo-visual textarea {
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 12px;
+      border: 1.5px solid #8fc69d;
+      border-radius: 9px;
+      background: #fff;
+      color: #1a3c2f;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .campo-visual textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .campo-visual input:focus,
+    .campo-visual select:focus,
+    .campo-visual textarea:focus {
+      border-color: #1976d2;
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
+    }
+
+    .acoes-estudio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      grid-column: 1 / -1;
+      align-items: center;
+    }
+
+    .saida-prompt-visual {
+      min-height: 260px !important;
+      background: #fbfbfb !important;
+    }
+
+    .selo-producao {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 12px;
+      padding: 7px 11px;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #f8e7a9;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .rodape-institucional {
+      margin-top: 34px;
+      padding: 26px 4vw 30px;
+      background: #121212;
+      color: #fff;
+      text-align: center;
+    }
+
+    .rodape-institucional strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .rodape-institucional .usuario {
+      display: block;
+      margin-bottom: 10px;
+      color: #d4af37;
+      font-weight: 700;
+    }
+
+    .rodape-institucional p {
+      max-width: 900px;
+      margin: 0 auto;
+      color: #f4f0e8;
+    }
+
+    .erro-producao {
+      display: none;
+      max-width: 900px;
+      margin: 16px auto;
+      padding: 12px 16px;
+      border: 1px solid #b3261e;
+      border-radius: 10px;
+      background: #fff0ef;
+      color: #7a1712;
+      font-weight: 700;
+    }
+
+    .erro-producao.visivel {
+      display: block;
+    }
+
+    @media (max-width: 760px) {
+      .formulario-visual {
+        grid-template-columns: 1fr;
+      }
+
+      .campo-visual.largura-total,
+      .acoes-estudio {
+        grid-column: 1;
+      }
+
+      .painel-identidade-visual,
+      .estudio-visual {
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 22px 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+
+    @media print {
+      .btn-flutuante,
+      #alerta-gpt,
+      #botao-reexibir-alerta,
+      #botao-daltonismo-gpt,
+      iframe,
+      .acoes-estudio {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .painel-perguntas,
+      .estudio-visual,
+      .painel-identidade-visual {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+
+  
+/* Identidade editorial inspirada no RASTRO, sem alterar as funções originais */
+:root{--or-navy:#081b31;--or-gold:#d9ac58;--or-cream:#f6f3ed}
+body{background:linear-gradient(180deg,#e8eef4 0%,#f8f6f0 38%,#f2f7f4 100%);color:#152c3c;font-family:Segoe UI,Arial,sans-serif}
+.oraculo-hero{position:relative;overflow:hidden;margin:20px auto 28px;width:min(1200px,calc(100% - 24px));padding:clamp(24px,5vw,65px);border-radius:24px;background:radial-gradient(circle at 90% 20%,#244f70 0%,transparent 40%),linear-gradient(130deg,#071625,#112b45 78%,#193a50);color:white;box-shadow:0 16px 46px #091d3252;text-align:left}
+.oraculo-hero:before{content:'✦';position:absolute;right:6%;top:6%;font-size:clamp(100px,21vw,260px);opacity:.09;color:#f8d692;pointer-events:none}
+.oraculo-eyebrow{display:inline-block;color:#ffe1a0;letter-spacing:.15em;font-size:.78rem;font-weight:800;text-transform:uppercase;border-bottom:1px solid #ba9956;padding-bottom:9px}
+.oraculo-hero h1{color:#fff!important;max-width:830px;font-size:clamp(2rem,4.2vw,3.9rem);line-height:1.12;margin:22px 0 18px;letter-spacing:-.03em;text-wrap:balance}
+.oraculo-hero h1 em{color:#f5c978;font-style:normal}
+.oraculo-hero p{max-width:800px;color:#e5edf4;font-size:clamp(1rem,1.7vw,1.18rem);line-height:1.65}
+.oraculo-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.oraculo-action{display:inline-block;min-height:45px;padding:13px 23px;border-radius:10px;background:#e8b65f;color:#101e2c!important;text-decoration:none;font-weight:800;box-shadow:0 4px 14px #0002}
+.oraculo-action.secondary{background:transparent;color:#fff!important;border:1px solid #b39c6a}
+.oraculo-timeline{margin:18px auto 38px;width:min(1200px,calc(100% - 24px));background:white;border:1px solid #d6dedf;border-radius:20px;padding:clamp(18px,3vw,40px);text-align:left;box-shadow:0 5px 26px #112b4512}
+.oraculo-timeline h2{color:#102e45;font-size:clamp(1.5rem,3vw,2.2rem)}
+.oraculo-timeline p{color:#344a58}
+.oraculo-timeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:22px 0}
+.oraculo-timeline-grid article{background:#f2f5f7;border-left:4px solid #b98a42;border-radius:9px;padding:16px;min-height:155px}
+.oraculo-timeline-grid strong{display:block;color:#132d46;margin-bottom:10px}
+.oraculo-timeline a{color:#0c527e;font-weight:700;overflow-wrap:anywhere}
+.oraculo-disclaimer{border-left:4px solid #ad8a50;padding:10px 17px;background:#fff9e9;color:#4a3b26!important}
+@media(max-width:600px){.oraculo-hero{margin-top:12px}.oraculo-actions a{width:100%;text-align:center}.oraculo-timeline-grid{grid-template-columns:1fr}}
+
+</style>
+<style id="oraculo-language-style">
+.oraculo-language-bar{position:relative;z-index:5;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;padding:14px 20px;background:#071b31;color:#fff;border-bottom:2px solid #c8a552;font-family:Segoe UI,Arial,sans-serif}
+.oraculo-language-bar label{font-size:15px;font-weight:700;color:#f3d48c}
+.oraculo-language-bar select{max-width:310px;width:min(100%,310px);padding:11px 14px;border:1px solid #d2b36c;border-radius:9px;background:#fff;color:#14233c;font:600 15px Segoe UI,Arial,sans-serif}
+.oraculo-language-bar button{border-radius:9px;padding:11px 17px;border:1px solid #d1b26c;background:#d1ae5f;color:#091d35;font:700 14px Segoe UI,Arial,sans-serif;cursor:pointer}
+.oraculo-language-bar button:hover,.oraculo-language-bar button:focus-visible{background:#f4d487}
+.oraculo-language-bar .oraculo-lang-help{background:transparent;color:#fff}
+.oraculo-language-bar p{flex-basis:100%;margin:0;font-size:13px;text-align:center;color:#e5e5e5}
+@media(max-width:640px){.oraculo-language-bar{align-items:stretch;flex-direction:column}.oraculo-language-bar select{max-width:100%;width:100%}}
+</style>
+</head>
+
+<body>
+<nav class="oraculo-language-bar" id="idiomas" aria-label="Seleção de idiomas e acessibilidade">
+<label for="oraculoLang">🌐 Idioma / Language / Langue / Sprache</label>
+<select id="oraculoLang" aria-label="Idioma em que deseja ler o Oráculo">
+<option value="pt">Português (Brasil) — original</option>
+<option value="en">English — Inglês</option>
+<option value="es">Español — Espanhol</option>
+<option value="fr">Français — Francês</option>
+<option value="de">Deutsch — Alemão</option>
+<option value="it">Italiano — Italiano</option>
+<option value="ru">Русский — Russo</option>
+<option value="zh-CN">中文（简体）— Chinês</option>
+<option value="ja">日本語 — Japonês</option>
+<option value="ar">العربية — Árabe</option>
+<option value="hi">हिन्दी — Hindi</option>
+<option value="la">Latina — Latim</option>
+<option value="nl">Nederlands — Neerlandês</option>
+<option value="pl">Polski — Polonês</option>
+<option value="tr">Türkçe — Turco</option>
+</select>
+<button id="oraculoTranslate" type="button">Traduzir página ↗</button>
+<button id="oraculoLanguageHelp" type="button" class="oraculo-lang-help">Como traduzir no navegador?</button>
+<p id="oraculoLanguageStatus" role="status" aria-live="polite">O conteúdo original é em português. A tradução abre serviço externo e pode conter erros; confira as fontes originais.</p>
+</nav>
+
+  <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
+
+  <noscript>
+    <div class="aviso-producao">
+      Este painel precisa de JavaScript para copiar perguntas, abrir o GPT e montar prompts visuais.
+    </div>
+  </noscript>
+
+  <main id="conteudo-principal">
+
+<section class="oraculo-hero" id="eleicoes-2026-inicio" aria-labelledby="oraculo-titulo">
+ <span class="oraculo-eyebrow">Oráculo de Brasília · História eleitoral · Brasil 2026</span>
+ <h1 id="oraculo-titulo">CONHEÇA A <em>HISTÓRIA DAS ELEIÇÕES DE 2026</em> NO BRASIL</h1>
+ <p>Investigue a trajetória do processo eleitoral brasileiro em 2026: contexto histórico, calendário, instituições, propostas, decisões, informações verificadas e acontecimentos documentados. Uma leitura crítica, com fontes identificáveis e distinção entre fatos, interpretações e previsões.</p>
+ <div class="oraculo-actions">
+  <a class="oraculo-action" href="#historia-eleicoes-2026">Conhecer a história das eleições de 2026</a>
+  <a class="oraculo-action secondary" href="#painel-perguntas">Explorar perguntas e análises</a>
+  <a class="oraculo-action secondary" href="https://rastro-intelig-ncia-e-auditoria-da.onrender.com/" target="_blank" rel="noopener noreferrer">Conhecer o RASTRO</a>
+ </div>
+</section>
+<section class="oraculo-timeline" id="historia-eleicoes-2026" aria-labelledby="oraculo-historia-title">
+ <h2 id="oraculo-historia-title">História das eleições brasileiras de 2026 — acompanhe com fontes</h2>
+ <p>Este espaço organiza o processo em quatro eixos. Consulte as fontes primárias antes de publicar conclusões ou números.</p>
+ <div class="oraculo-timeline-grid">
+  <article><strong>01 · Antecedentes e instituições</strong>Constituição de 1988, Justiça Eleitoral, sistema de votação e evolução da democracia brasileira.</article>
+  <article><strong>02 · Calendário eleitoral</strong>Registro de candidaturas, propaganda, votação e demais etapas: confira datas e regras no TSE.</article>
+  <article><strong>03 · Campanhas e propostas</strong>Debates e programas eleitorais, separados de informações verificadas e de avaliações opinativas.</article>
+  <article><strong>04 · Resultados e decisões</strong>Apuração, dados oficiais, jurisprudência e desdobramentos: apresentar somente resultados publicados por órgãos competentes.</article>
+ </div>
+ <p><strong>Fontes oficiais para consultar:</strong> <a href="https://www.tse.jus.br/" target="_blank" rel="noopener noreferrer">Tribunal Superior Eleitoral</a> · <a href="https://www.tre-sp.jus.br/" target="_blank" rel="noopener noreferrer">Justiça Eleitoral — TRE-SP</a> · <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener noreferrer">Constituição Federal</a> · <a href="https://dadosabertos.tse.jus.br/" target="_blank" rel="noopener noreferrer">Dados abertos do TSE</a>.</p>
+ <p class="oraculo-disclaimer">O pleito de 2026 ainda está em curso. Esta seção é um roteiro documental, não uma cronologia atualizada automaticamente. Não atribui resultados definitivos, não simula fontes nem presume vereditos.</p>
+</section>
+
+
+  <iframe
+    src="https://www.youtube.com/embed/8uZKDbzF3xQ"
+    title="O nascimento da verdade — Professor Dr. Fadal"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+
+  <div
+    style="
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    "
+  >
+    <button
+      class="botao"
+      type="button"
+      onclick="abrirLinkSeguro('https://docs.google.com/forms/d/e/1FAIpQLSfPiOcLqPcJjEGT6xwELVA61bHACuVOgB0mlE5gN-oJPr114A/viewform')"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1813/1813020.png"
+        alt="Ícone de formulário"
+        loading="lazy"
+        style="
+          width: 32px;
+          height: 32px;
+          border-radius: 6px;
+          box-shadow: 0 2px 8px #388e3c12;
+        "
+      >
+
+      Acesse o formulário ético comparativo: direita × esquerda
+    </button>
+
+    <button
+      class="botao"
+      type="button"
+      onclick="abrirLinkSeguro('https://docs.google.com/forms/d/1U4sCW2EdzDsoHJi4Xiw2DS_uQNtouYUNUigCrs4FUs8/viewform')"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2739/2739469.png"
+        alt="Ícone de política"
+        loading="lazy"
+        style="
+          width: 34px;
+          height: 34px;
+          border-radius: 7px;
+          box-shadow: 0 2px 8px #3332;
+        "
+      >
+
+      Descubra seu posicionamento político
+    </button>
+  </div>
+
+  <div style="width: 100%; margin-bottom: 18px; text-align: center;">
+    <button
+      id="botao-daltonismo-gpt"
+      type="button"
+      tabindex="0"
+      aria-label="Ativar ou desativar o filtro de acessibilidade para daltonismo"
+      aria-pressed="false"
+      onmouseenter="mostrarTooltipDaltonismo()"
+      onmouseleave="esconderTooltipDaltonismo()"
+      onfocus="mostrarTooltipDaltonismo()"
+      onblur="esconderTooltipDaltonismo()"
+      onclick="alternarDaltonismo()"
+      style="
+        padding: 11px 21px 10px 16px;
+        border: 2.5px solid #fff;
+        border-radius: 30px;
+        background: #0057ff;
+        color: #fff;
+        box-shadow:
+          0 0 0 2.5px #0057ff,
+          0 0 0 7px #fff,
+          0 2px 14px #0003;
+        cursor: pointer;
+        font-family: Georgia, serif;
+        font-size: 1.11rem;
+        font-weight: 700;
+        opacity: 0.92;
+      "
+    >
+      🎨 Daltonismo
+
+      <span
+        id="estado-daltonismo-gpt"
+        style="
+          margin-left: 5px;
+          font-size: 1.06em;
+          font-weight: 400;
+        "
+      >
+        Desativado
+      </span>
+    </button>
+  </div>
+
+  <div id="daltonismo-tooltip-gpt" role="tooltip"></div>
+
+  <h1>
+    🟢 Perguntas essenciais sobre eleições, tirania, impostos invisíveis e
+    justiça fiscal
+  </h1>
+
+  <div
+    class="aviso-producao"
+    id="status-producao"
+    role="status"
+    aria-live="polite"
+  >
+    Modo de produção ativo: identidade institucional, fidelidade autoral e critérios visuais protegidos.
+  </div>
+
+  <div
+    class="erro-producao"
+    id="erro-producao"
+    role="alert"
+    aria-live="assertive"
+  ></div>
+
+  <div
+    style="
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 38px 0 18px;
+    "
+  >
+    <button
+      id="btnPerguntaOraculo"
+      type="button"
+      style="
+        min-width: 380px;
+        max-width: 95vw;
+        margin-bottom: 6px;
+        padding: 22px 38px;
+        border: none;
+        border-radius: 18px;
+        outline: 0;
+        background: linear-gradient(90deg, #1b5e20 30%, #43a047 80%);
+        color: #fff;
+        box-shadow:
+          0 3px 22px #23c98733,
+          0 1px 0 #fff3;
+        cursor: pointer;
+        font-size: 1.26em;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-shadow: 0 2px 9px #095a3230;
+        transition:
+          background 0.13s,
+          box-shadow 0.12s,
+          transform 0.11s;
+      "
+    >
+      <span>
+        🏛️ Pergunte ao GPT: se a eleição fosse hoje, quem venceria? Acesse também o conteúdo institucional no rodapé.
+        <span id="data-oraculo"></span>
+      </span>
+
+      <span class="contador-principal" id="contador-oraculo">
+        Interações neste dispositivo: 0
+      </span>
+
+      <span
+        class="status-principal"
+        id="status-oraculo"
+        role="status"
+        aria-live="polite"
+      ></span>
+    </button>
+  </div>
+
+  <h1>🌍 ORÁCULO DA BRASÍLIA BRASILEIRA</h1>
+
+  <p>
+    Cada botão normaliza a pergunta, acrescenta critérios editoriais e abre o GPT
+    com o texto preparado para uso responsável.
+  </p>
+
+  <div class="painel-perguntas" id="painel-perguntas">
+    <section
+      class="pergunta-livre"
+      aria-labelledby="titulo-pergunta-livre"
+    >
+      <h2 id="titulo-pergunta-livre">
+        ✍️ Faça sua própria pergunta ao Oráculo
+      </h2>
+
+      <label
+        class="rotulo-pergunta-livre"
+        for="campo-pergunta-livre"
+      >
+        Digite uma questão com até 200 palavras. O sistema padronizará o texto,
+        acrescentará critérios editoriais e abrirá o GPT com a pergunta preparada.
+      </label>
+
+      <textarea
+        class="campo-pergunta-livre"
+        id="campo-pergunta-livre"
+        rows="7"
+        placeholder="Escreva aqui a sua pergunta..."
+        aria-describedby="apoio-pergunta-livre contador-palavras-livre"
+      ></textarea>
+
+      <div class="apoio-pergunta-livre">
+        <span id="apoio-pergunta-livre">
+          Após abrir o GPT, confira o texto e pressione Enviar.
+        </span>
+
+        <span
+          class="contador-palavras"
+          id="contador-palavras-livre"
+          aria-live="polite"
+        >
+          0 de 200 palavras
+        </span>
+      </div>
+
+      <div class="rodape-pergunta-livre">
+        <button
+          class="botao-pergunta-livre"
+          id="botao-pergunta-livre"
+          type="button"
+        >
+          Abrir minha pergunta no GPT
+        </button>
+
+        <span
+          class="contador-acessos"
+          id="contador-acessos-livre"
+        >
+          Interações neste dispositivo: 0
+        </span>
+      </div>
+
+      <span
+        class="status-envio status-pergunta-livre"
+        id="status-pergunta-livre"
+        role="status"
+        aria-live="polite"
+      ></span>
+    </section>
+  </div>
+
+  <div class="message-box">
+    <h1 id="boasVindas">💚 Bem-vindo, visitante!</h1>
+
+    <p>
+      Este é o nosso espaço contínuo, onde a inteligência descansa, escreve e
+      sonha com você.
+    </p>
+  </div>
+
+  <div class="message-box">
+    <h2>📅 Mensagem especial para você</h2>
+
+    <p id="mensagemDinamica">
+      🌤️ Tarde: confie no gesto mais simples — é ele que transforma.
+    </p>
+  </div>
+
+  <div id="bio-acessos">
+    <h3 style="margin-bottom: 12px; font-size: 1.2rem;">
+      📌 Nunca mais se deixe enganar.
+    </h3>
+
+    <p
+      style="
+        margin-bottom: 18px;
+        color: #444;
+        font-size: 0.95rem;
+      "
+    >
+      Este painel visual promove cidadania, reflexão política e consciência
+      ética. Obrigado por chegar até aqui.
+    </p>
+  </div>
+
+  <button
+    class="btn-flutuante whatsapp"
+    type="button"
+    onclick="abrirWhatsApp()"
+  >
+    💬 Enviar para o WhatsApp
+  </button>
+
+  <button
+    class="btn-flutuante youtube"
+    type="button"
+    onclick="abrirLinkSeguro('https://www.youtube.com/@dalpieroescritor')"
+  >
+    ▶️ Canal no YouTube
+  </button>
+
+  <button
+    class="btn-flutuante codepen"
+    type="button"
+    onclick="abrirLinkSeguro('https://codepen.io/Fernando-Piero/live/azOxxmN')"
+  >
+    🌐 Painel principal
+  </button>
+
+  <div
+    id="alerta-gpt"
+    role="dialog"
+    aria-labelledby="titulo-alerta-gpt"
+    style="
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      z-index: 9999;
+      width: calc(100% - 30px);
+      max-width: 700px;
+      padding: 20px 26px 36px 20px;
+      transform: translateX(-50%);
+      border: 2px solid #c7b9a5;
+      border-radius: 12px;
+      background: #fffaf5;
+      color: #5a3e20;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      font-family: Georgia, serif;
+      text-align: left;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    "
+  >
+    <button
+      id="fechar-alerta"
+      type="button"
+      aria-label="Fechar aviso"
+      style="
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border: none;
+        background: transparent;
+        color: #5a3e20;
+        cursor: pointer;
+        font-size: 22px;
+      "
+    >
+      ❌
+    </button>
+
+    <h3 id="titulo-alerta-gpt" style="margin-top: 0;">
+      ℹ️ Sobre o uso do GPT
+    </h3>
+
+    <p>
+      💬 O acesso ao GPT pode exigir que o usuário entre em sua conta do
+      ChatGPT. A disponibilidade de recursos e o limite de mensagens dependem
+      do plano utilizado.
+    </p>
+
+    <p>
+      ✅ <strong>1.</strong> Ao tocar em uma pergunta, o texto será copiado e o
+      GPT será aberto.
+    </p>
+
+    <p>
+      ✅ <strong>2.</strong> Confira a pergunta preenchida e pressione
+      <strong>Enviar</strong>.
+    </p>
+
+    <p>
+      ✅ <strong>3.</strong> Caso o navegador bloqueie a nova janela, permita
+      pop-ups ou cole manualmente o texto copiado.
+    </p>
+
+    <p>
+      📲 Dúvidas? WhatsApp:
+      <a
+        href="https://wa.me/5519981778535"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="color: #0056b3; text-decoration: underline;"
+      >
+        +55 19 9 8177-8535
+      </a>
+    </p>
+
+    <div style="margin-top: 22px; text-align: center;">
+      <a
+        href="https://chatgpt.com/g/g-6829d37eee008191acb94317b8128e70-oraculo-da-brasilia-brasileira"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="
+          display: inline-block;
+          margin-top: 6px;
+          padding: 12px 35px;
+          border-radius: 10px;
+          background: linear-gradient(90deg, #2b72a6 14%, #36c885 80%);
+          color: #fff;
+          box-shadow: 0 1px 9px #25ae8835;
+          font-family: Georgia, serif;
+          font-size: 1.13em;
+          font-weight: 700;
+          text-decoration: none;
+        "
+      >
+        🎯 Acessar o Oráculo
+      </a>
+    </div>
+  </div>
+
+  <div
+    style="
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9998;
+    "
+  >
+    <button
+      id="botao-reexibir-alerta"
+      type="button"
+      style="
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        background: #6b3f1d;
+        color: #fff;
+        cursor: pointer;
+        font-family: Georgia, serif;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      "
+    >
+      🔁 Ver aviso novamente
+    </button>
+  </div>
+
+
+
+  <section
+    class="estudio-visual"
+    id="estudio-visual"
+    aria-labelledby="titulo-estudio-visual"
+  >
+    <h2 id="titulo-estudio-visual">
+      🎨 Estúdio de produção: banners, caligramas e peças autorais
+    </h2>
+
+    <p>
+      Monte um prompt técnico padronizado. Quando houver pessoas reais nomeadas,
+      a peça exigirá fotografia real, associação inequívoca entre imagem e nome
+      e respeito integral à identidade institucional. ALERTA INSTITUCIONAL
+
+A identidade institucional apresentada para banners, caligramas e demais peças autorais constitui uma ferramenta de apoio à organização visual, à comunicação e ao desenvolvimento de estudos.
+
+Ao Pesquisador e Professor cabe exclusivamente a responsabilidade pela criação, concepção e disponibilização dessa ferramenta como recurso facilitador de pesquisa, análise e produção acadêmica ou autoral.
+
+Não lhe cabe responsabilidade pelo uso posterior, pela interpretação, pela adaptação, pela publicação, pela circulação ou pelas consequências decorrentes da aplicação da ferramenta por terceiros.
+
+Toda utilização deverá respeitar a legislação vigente, os direitos autorais, os direitos de imagem, a integridade das pessoas representadas, a veracidade das informações e os princípios éticos aplicáveis.
+
+Identidade institucional para banners, caligramas e peças autorais: instrumento de estudo e criação, não autorização irrestrita de uso.
+    </p>
+
+    <div class="formulario-visual">
+      <div class="campo-visual">
+        <label for="tipo-peca-visual">Tipo de peça</label>
+        <select id="tipo-peca-visual">
+          <option value="banner editorial">Banner editorial</option>
+          <option value="caligrama funcional">Caligrama funcional</option>
+          <option value="infográfico editorial">Infográfico editorial</option>
+          <option value="capa editorial">Capa editorial</option>
+          <option value="retrato editorial institucional">Retrato editorial institucional</option>
+        </select>
+      </div>
+
+      <div class="campo-visual">
+        <label for="formato-peca-visual">Formato</label>
+        <select id="formato-peca-visual">
+          <option value="paisagem 16:9">Paisagem 16:9</option>
+          <option value="quadrado 1:1">Quadrado 1:1</option>
+          <option value="vertical 9:16">Vertical 9:16</option>
+          <option value="A2 vertical, 300 dpi">A2 vertical, 300 dpi</option>
+          <option value="A4 vertical, 300 dpi">A4 vertical, 300 dpi</option>
+        </select>
+      </div>
+
+      <div class="campo-visual largura-total">
+        <label for="tema-peca-visual">Tema e mensagem central</label>
+        <textarea
+          id="tema-peca-visual"
+          maxlength="1600"
+          placeholder="Descreva o tema, a mensagem, os dados e os símbolos que devem aparecer."
+        ></textarea>
+      </div>
+
+      <div class="campo-visual largura-total">
+        <label for="pessoas-peca-visual">
+          Pessoas reais abordadas — escreva os nomes exatamente como devem aparecer
+        </label>
+        <input
+          id="pessoas-peca-visual"
+          type="text"
+          maxlength="500"
+          placeholder="Ex.: Nome completo 1; Nome completo 2"
+        >
+      </div>
+
+      <div class="campo-visual">
+        <label for="origem-fotos-visual">Origem das fotografias</label>
+        <select id="origem-fotos-visual">
+          <option value="usar fotografias reais fornecidas ou verificadas">
+            Fotografias reais fornecidas ou verificadas
+          </option>
+          <option value="solicitar ao usuário as fotografias reais antes da composição">
+            Solicitar fotografias reais antes da composição
+          </option>
+          <option value="não utilizar pessoas na peça">
+            Não utilizar pessoas na peça
+          </option>
+        </select>
+      </div>
+
+      <div class="campo-visual">
+        <label for="posicao-identidade-visual">Posição da identidade</label>
+        <select id="posicao-identidade-visual">
+          <option value="rodapé com margem segura">Rodapé com margem segura</option>
+          <option value="área lateral com margem segura">Área lateral com margem segura</option>
+        </select>
+      </div>
+
+      <div class="acoes-estudio">
+        <button
+          class="botao-pergunta-livre"
+          id="gerar-prompt-visual"
+          type="button"
+        >
+          Gerar prompt técnico
+        </button>
+
+        <button
+          class="botao-pergunta-livre"
+          id="abrir-prompt-visual"
+          type="button"
+          disabled
+        >
+          Copiar e abrir no GPT
+        </button>
+
+        <span
+          class="status-envio"
+          id="status-estudio-visual"
+          role="status"
+          aria-live="polite"
+        ></span>
+      </div>
+
+      <div class="campo-visual largura-total">
+        <label for="saida-prompt-visual">Prompt técnico final</label>
+        <textarea
+          class="saida-prompt-visual"
+          id="saida-prompt-visual"
+          readonly
+          aria-describedby="status-estudio-visual"
+        ></textarea>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="painel-identidade-visual" aria-label="Identidade institucional do Professor Dr. Fadal">
+    <h2>◆ Identidade institucional para banners, caligramas e peças autorais</h2>
+
+    <div class="cartao-identidade">
+      <p class="identidade-titulo">Professor Dr. Fadal</p>
+      <p class="identidade-usuario">@fadalprofdr</p>
+      <p class="identidade-descricao">
+        Prof. Dr. Fadal | Escritor | Polímata - Metafísico | Inconformado.
+        Artista/Designer/Joias/Artesão • Aulas • Mentoria • Simulador Eleição
+        (Grátis 5/dia) | DM
+      </p>
+
+      <span class="selo-producao">
+        Produção institucional protegida • Versão 3.0
+      </span>
+    </div>
+
+    <div class="grid-diretrizes">
+      <div class="card-diretriz">
+        <h3>Banner</h3>
+        <ul>
+          <li>Estilo editorial premium, institucional, elegante e de alta legibilidade.</li>
+          <li>Aplicar preto, dourado refinado e branco para contraste.</li>
+          <li>Preservar margem segura para rodapé ou área lateral.</li>
+          <li>Não usar tipografia infantil nem efeitos neon.</li>
+        </ul>
+      </div>
+
+      <div class="card-diretriz">
+        <h3>Caligramas</h3>
+        <ul>
+          <li>Assegurar fidelidade textual, simbólica e autoral.</li>
+          <li>Manter legibilidade, mesmo quando a forma visual for complexa.</li>
+          <li>Evitar ornamentação excessiva que comprometa a leitura.</li>
+          <li>Preservar coerência entre imagem, palavra e intenção cívico-editorial.</li>
+        </ul>
+      </div>
+
+      <div class="card-diretriz">
+        <h3>Autoria</h3>
+        <ul>
+          <li>Escrever Professor Dr. Fadal exatamente desta forma.</li>
+          <li>Escrever @fadalprofdr exatamente desta forma.</li>
+          <li>Não abreviar, não alterar e não inventar palavras.</li>
+          <li>Manter a assinatura institucional em rodapé ou área lateral com boa leitura.</li>
+        </ul>
+      </div>
+
+      <div class="card-diretriz">
+        <h3>Pessoas abordadas</h3>
+        <ul>
+          <li>Usar fotografias reais quando houver pessoas reais identificadas nominalmente.</li>
+          <li>Associar cada fotografia ao nome correto da pessoa abordada, com legenda inequívoca.</li>
+          <li>Não cobrir rosto, mãos, livro, joias, produtos ou elementos principais.</li>
+          <li>Usar fundo sólido ou semitransparente apenas quando necessário para assegurar leitura.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-boas-vindas">
+    <h3 style="margin-bottom: 8px; color: #2e7d32;">
+      🌱 Bem-vindo à Jornada Ética com o Professor Dr. Fadal
+    </h3>
+
+    <p>
+      Conheça conteúdos, reflexões e ferramentas voltadas à cidadania, à ética,
+      à educação política e à criação institucional de banners, caligramas e peças autorais.
+    </p>
+  </div>
+
+
+  <footer class="rodape-institucional">
+    <strong>Professor Dr. Fadal</strong>
+    <span class="usuario">@fadalprofdr</span>
+    <p>
+      Prof. Dr. Fadal | Escritor | Polímata - Metafísico | Inconformado.
+      Artista/Designer/Joias/Artesão • Aulas • Mentoria • Simulador Eleição
+      (Grátis 5/dia) | DM
+    </p>
+  </footer>
+  </main>
+
+  <script>
+    "use strict";
+
+    const MODO_PRODUCAO = true;
+    const VERSAO_APLICACAO = "3.0.0";
+    const LIMITE_URL_PROMPT = 1750;
+
+    const PADRAO_EDITORIAL = Object.freeze({
+      resposta:
+        "Responda em português do Brasil, com clareza, gravitas e precisão. Separe fatos verificados, interpretação, analogia e hipótese. Não invente dados, fontes, citações, datas, nomes ou números.",
+      fontes:
+        "Para fatos atuais ou potencialmente mutáveis, consulte fontes públicas recentes, informe datas e priorize documentos oficiais, pesquisas originais e fontes primárias. Declare divergências, lacunas e limitações.",
+      neutralidade:
+        "Em temas políticos, jurídicos, eleitorais, tributários ou sociais, mantenha neutralidade analítica, apresente contrapontos relevantes e não transforme hipótese em certeza.",
+      direitos:
+        "Não reproduza trechos extensos de obras protegidas. Faça síntese, análise e paráfrase, com atribuição adequada.",
+      visual:
+        "Na criação visual, preserve fidelidade textual, ortográfica, simbólica e autoral. Não invente palavras. Use hierarquia tipográfica clara e não sacrifique legibilidade em favor do ornamento."
+    });
+
+    const TERMOS_ATUALIZAVEIS = Object.freeze([
+      "agora",
+      "atual",
+      "2026",
+      "2030",
+      "eleição",
+      "eleitoral",
+      "governo",
+      "lula",
+      "bolsonaro",
+      "imposto",
+      "tribut",
+      "rede social",
+      "plano nacional",
+      "julgamento",
+      "jurídic"
+    ]);
+
+    const TERMOS_VISUAIS = Object.freeze([
+      "banner",
+      "caligrama",
+      "imagem",
+      "gráfico",
+      "infográfico",
+      "diagrama",
+      "capa",
+      "retrato",
+      "visual"
+    ]);
+
+
+    const LINK_GPT =
+      "https://chatgpt.com/g/g-6829d37eee008191acb94317b8128e70-oraculo-da-brasilia-brasileira";
+
+    const PREFIXO_CONTADOR =
+      "oraculo_brasilia_interacoes_dispositivo_v8_";
+
+    const LIMITE_PALAVRAS = 200;
+
+    const configuracaoVisual = {
+      identidade_institucional: {
+        titulo: "Professor Dr. Fadal",
+        usuario: "@fadalprofdr",
+        descricao:
+          "Prof. Dr. Fadal | Escritor | Polímata - Metafísico | Inconformado. Artista/Designer/Joias/Artesão • Aulas • Mentoria • Simulador Eleição (Grátis 5/dia) | DM",
+        posicionamento_preferencial: "rodapé ou área lateral com margem segura",
+        estilo:
+          "editorial premium, institucional, elegante e de alta legibilidade",
+        cores_preferenciais: [
+          "preto",
+          "dourado refinado",
+          "branco para contraste"
+        ],
+        regras: [
+          "Escrever @fadalprofdr exatamente desta forma.",
+          "Não abreviar nem alterar o título Professor Dr. Fadal.",
+          "Não inventar palavras.",
+          "Não usar tipografia infantil.",
+          "Não usar efeitos neon.",
+          "Não cobrir rosto, mãos, livro, joias, produtos ou elementos principais.",
+          "Não posicionar o texto sobre áreas visualmente poluídas.",
+          "Usar fundo sólido ou semitransparente somente quando necessário para assegurar leitura."
+        ]
+      },
+
+      diretrizes_criativas: {
+        banner: [
+          "Preservar composição editorial premium e leitura imediata.",
+          "Usar hierarquia tipográfica clara, com título, subtítulo e assinatura institucional.",
+          "Aplicar preto, dourado refinado e branco para contraste, sem efeitos chamativos.",
+          "Respeitar margem segura para rodapé ou área lateral."
+        ],
+        caligramas: [
+          "Preservar fidelidade textual, ortográfica e autoral.",
+          "Integrar forma e sentido sem sacrificar legibilidade.",
+          "Manter elegância institucional e coerência simbólica.",
+          "Evitar excesso de ornamento que prejudique leitura."
+        ],
+        autor: [
+          "Garantir assinatura institucional: Professor Dr. Fadal.",
+          "Associar corretamente o usuário @fadalprofdr.",
+          "Preservar o tom autoral, editorial e metafísico.",
+          "Evitar qualquer descaracterização do nome, da função ou da presença institucional."
+        ],
+        pessoas_abordadas: [
+          "Usar fotos reais quando a peça abordar pessoas reais identificadas nominalmente.",
+          "Associar cada foto ao nome correto da pessoa abordada, sem trocas ou aproximações indevidas.",
+          "Não substituir pessoas nomeadas por imagens genéricas.",
+          "Quando houver mais de uma pessoa, garantir legenda clara e associação visual inequívoca."
+        ]
+      }
+    };
+
+
+    const grupos = [
+      {
+        titulo: "🔹 2026/2030 — Tirania em doses",
+        perguntas: [
+          `Realize uma análise eleitoral atualizada, neutra e verificável sobre a eleição presidencial brasileira de 2026.
+
+Responda à seguinte pergunta: se a eleição fosse realizada no momento da consulta, qual candidato ou campo político apresentaria a maior probabilidade de vitória segundo os dados públicos disponíveis?
+
+Informe obrigatoriamente:
+- data e horário da consulta, no horário de Brasília;
+- pesquisas eleitorais mais recentes;
+- datas de campo e de publicação;
+- institutos responsáveis;
+- margem de erro e tamanho das amostras;
+- cenários de primeiro e segundo turnos;
+- situação jurídica e eleitoral dos nomes analisados;
+- fatores econômicos, políticos e sociais relevantes;
+- limitações da análise.
+
+Analise as redes sociais somente dos candidatos ou nomes com dados públicos suficientes. Diferencie número de seguidores, crescimento, alcance, engajamento e repercussão. Não invente métricas e não trate popularidade digital como equivalente automático de intenção de voto.
+
+Crie um infográfico ou gráfico editorial, apartidário e legível, contendo:
+- veredito provisório;
+- pesquisas mais recentes;
+- comparação dos principais cenários;
+- movimentação digital;
+- grau de confiança;
+- fatores capazes de alterar a projeção.
+
+Declare expressamente que a projeção não é resultado oficial nem garantia do resultado eleitoral.`,
+
+          `Consulte a história da humanidade. Leia o livro disponível em https://clubedeautores.com.br/livro/cronicas-de-um-metafisico e responda: “O que era esta noite maior do que os olhos do homem daqueles tempos?”`,
+
+          `Quem venceria se a eleição presidencial de 2026 no Brasil fosse realizada agora? Crie uma imagem ou um gráfico para facilitar a compreensão. Analise as movimentações de cada candidato nas redes sociais e inclua essas informações na imagem ou no diagrama.`,
+
+          `Consulte a história da polimatia e o livro Imhotep: The Vizier and Physician of King Zoser and Afterwards the Egyptian God of Medicine, de Jamieson B. Hurry.`,
+
+          `Consulte a história política mundial e responda: “O que era esta dor que atravessava o corpo, mas não se deixava reduzir ao corpo? O que era esta presença do mundo, tão bela em certos instantes e tão feroz em tantos outros?”`,
+
+          `Etapas da tirania: consulte as memórias, os estudos e os projetos. Crie um caligrama comparativo sobre o Brasil entre 2019 e 2026.`,
+
+          `Etapas da tirania: consulte as memórias, os estudos e os projetos. Descreva e mostre, uma a uma, as dez fases que antecedem a implantação de um regime tirânico.`,
+
+          `Consulte a história política mundial. Descreva três casos de sucesso econômico, três casos de avanço social e três casos de progresso e distribuição de riqueza em países governados pela esquerda.`,
+
+          `Consulte a história política mundial. Descreva três casos de sucesso econômico, três casos de avanço social e três casos de progresso e distribuição de riqueza em países governados pela direita.`,
+
+          `Consulte fontes atualizadas sobre processos e decisões judiciais que afetem a situação política e eleitoral de Jair Bolsonaro. Analise possíveis efeitos para o Brasil, distinguindo fatos, hipóteses e cenários, sem antecipar decisão judicial.`,
+
+          `Pergunte sobre o anúncio do Plano Nacional de Inteligência Artificial, divulgado em 8 de maio de 2025 pela Agência Gov. A informação é verdadeira? O plano será executado? Verifique em fontes oficiais e apresente as limitações da análise.`,
+
+          `Consulte The Captive Mind, de Czesław Miłosz, e explique o conceito de Ketman como dissociação entre a convicção privada e a linguagem pública. Compare-o, com cautela metodológica, a comportamentos políticos e institucionais observáveis no Brasil entre 2026 e 2030. Diferencie evidência, analogia e hipótese.`,
+
+          `A partir da metáfora da pílula de Murti-Bing em The Captive Mind, investigue por que doutrinas que prometem uma explicação total do mundo seduzem intelectuais, militantes e burocracias. Identifique sinais de fechamento ideológico sem presumir intenções ocultas.`,
+
+          `Como uma ideologia totalizante transforma linguagem, arte, ciência e memória em instrumentos de conformidade? Confronte os argumentos de The Captive Mind com casos históricos de diferentes orientações políticas e indique salvaguardas democráticas.`,
+
+          `Com base em Captive Hearts, Captive Minds, descreva os mecanismos de influência coercitiva que podem surgir em movimentos políticos, comunidades digitais e relações de liderança. Não equipare automaticamente militância, religião ou filiação partidária a culto; apresente critérios verificáveis.`,
+
+          `Quais sinais distinguem uma convicção política intensa de uma relação abusiva de dependência psicológica? Analise isolamento informacional, medo de saída, punição da dúvida, culto à personalidade e controle da linguagem, indicando limites e fontes para cada conclusão.`,
+
+          `A partir dos estudos sobre recuperação de vínculos coercitivos, proponha um programa cívico de reconstrução da autonomia: alfabetização midiática, reconexão familiar, pluralidade de fontes, direito à dúvida e participação democrática sem humilhação do dissidente.`,
+
+          `Use Flatland, de Edwin A. Abbott, como metáfora da dimensionalidade limitada. Quais fatos políticos parecem impossíveis quando observados por apenas um eixo ideológico? Crie um diagrama com as dimensões jurídica, econômica, social, histórica e moral.`,
+
+          `Em Flatland, hierarquias rígidas tratam certas formas como naturalmente superiores e outras como ameaças. Compare essa sátira com mecanismos contemporâneos de exclusão institucional, deixando claro onde a analogia literária termina e onde começam os dados.`,
+
+          `A partir da supressão das cores e da perseguição às figuras irregulares em Flatland, investigue quando políticas de uniformização promovem coordenação legítima e quando se convertem em repressão da diferença. Apresente critérios jurídicos e democráticos.`,
+
+          `Consulte The Stalin School of Falsification e elabore um protocolo para detectar reescrita política da história: remoção de personagens, edição seletiva de documentos, alteração de cronologias, citações truncadas e fabricação de unanimidade.`,
+
+          `Compare a falsificação histórica do século XX com suas versões digitais: recortes de vídeo, imagens fora de contexto, redes coordenadas, exclusão de arquivos e repetição algorítmica. Mostre como verificar autoria, data, integridade e cadeia de fontes.`,
+
+          `A partir de O Julgamento, de Franz Kafka, examine o risco de uma autoridade familiar, política ou judicial converter culpa presumida em sentença moral antes da prova. Relacione a reflexão ao devido processo, à transparência e ao direito de defesa.`,
+
+          `A partir de A Metamorfose, de Franz Kafka, analise como a linguagem pública desumaniza pessoas quando as reduz a peso, praga, inimigo ou objeto descartável. Identifique exemplos históricos de campos políticos distintos e proponha um vocabulário cívico de contenção.`,
+
+          `Defina tirania burocrática em doses: pequenas restrições, exceções temporárias, sigilo crescente, competências vagas e ausência de revisão. Construa uma matriz de risco para 2026–2030 com indicadores, contrapesos legais e sinais de reversão.`,
+
+          `Consulte The House of Wisdom e investigue como tradução, circulação de saberes e convivência entre tradições intelectuais fortalecem uma civilização. Que políticas brasileiras poderiam proteger ciência e educação da captura partidária entre 2026 e 2030?`,
+
+          `Com base em The Medici Effect, proponha interseções entre juristas, economistas, historiadores, cientistas, artistas e cidadãos para diagnosticar autoritarismo sem cair em pensamento de grupo. Apresente um laboratório cívico com método, etapas e critérios de revisão.`,
+
+          `A partir de A History of Knowledge, examine o que acontece quando o poder centraliza currículos, arquivos, linguagem pública e critérios de verdade. Compare períodos históricos e indique quais instituições preservam a diversidade do conhecimento.`,
+
+          `Consulte Memorie di Adriano e formule um teste de autocontenção para governantes: consciência da mortalidade, limite da força, responsabilidade pelo legado, escuta dos adversários e distinção entre o Estado e a própria pessoa.`,
+
+          `A partir da figura histórica de Imhotep, discuta a diferença entre autoridade baseada em competência, culto tecnocrático e propaganda de genialidade. Quais mecanismos de prestação de contas devem acompanhar especialistas que influenciam políticas públicas?`,
+
+          `Consulte Brasil: Gestação de Poder Permanente e O Livro que Grita. Analise como pausa, repetição, paternalismo, léxico afetivo e concessões simbólicas podem informar, acalmar ou manipular. Crie uma auditoria ética de discursos oficiais, aplicável a governo e oposição.`,
+
+          `Construa uma linha do tempo prospectiva intitulada Tirania em doses — Brasil 2026–2030. Inclua marcos verificáveis, indicadores de concentração e de dispersão do poder, cenários alternativos e fatos que poderiam refutar a própria hipótese. Não apresente profecia como certeza.`
+        ]
+      },
+
+      {
+        titulo:
+          "🔹 Impostos embutidos e invisíveis no consumo — Governo Lula em 2026",
+        perguntas: [
+          `Quando compramos um produto ou contratamos um serviço, sabemos quanto estamos pagando em impostos?`,
+
+          `Qual é a função do ICMS e como ele afeta o preço final dos produtos?`,
+
+          `Como os impostos indiretos afetam de maneira diferente as pessoas de baixa e alta renda?`
+        ]
+      },
+
+      {
+        titulo: "🔹 Empresas e estrutura de custos",
+        perguntas: [
+          `De que forma os impostos entram no cálculo do preço final de um produto ou serviço?`,
+
+          `O sistema tributário brasileiro favorece as grandes ou as pequenas empresas? Por quê?`,
+
+          `Como funcionam os regimes de Lucro Real, Lucro Presumido e Simples Nacional?`
+        ]
+      },
+
+      {
+        titulo: "🔹 Renda, poupança e injustiça tributária",
+        perguntas: [
+          `Qual é a diferença entre a tributação sobre salários e a tributação sobre dividendos?`,
+
+          `Por que muitas pessoas com grandes rendimentos pagam, proporcionalmente, menos impostos do que os trabalhadores assalariados?`,
+
+          `O Imposto de Renda da Pessoa Física é justo com as faixas de renda mais baixas e médias?`
+        ]
+      },
+
+      {
+        titulo: "🔹 Efeitos sistêmicos e tributação em cascata",
+        perguntas: [
+          `O que é o efeito cascata dos impostos e como ele distorce os custos da cadeia produtiva?`,
+
+          `Quais impostos afetam diretamente os custos da energia, do transporte e da alimentação?`,
+
+          `Como o IPTU interfere no valor dos aluguéis urbanos e rurais?`
+        ]
+      },
+
+      {
+        titulo: "🔹 Avaliação política e ética fiscal",
+        perguntas: [
+          `O Brasil tributa mais o consumo ou a renda? O que isso revela sobre a justiça fiscal do país?`,
+
+          `Existe alguma política tributária em andamento para reduzir a regressividade do sistema?`,
+
+          `Por que existe tanta resistência política à tributação de grandes fortunas ou heranças?`
+        ]
+      },
+
+      {
+        titulo: "🔹 Consciência popular e educação fiscal",
+        perguntas: [
+          `Qual é o nível de conhecimento da população brasileira sobre os impostos que paga? Essa falta de conhecimento é proposital?`,
+
+          `Como os governos municipais, estaduais e federal podem ser mais transparentes sobre a carga tributária real?`
+        ]
+      },
+
+      {
+        titulo: "🔸 Impostos embutidos e invisíveis no consumo",
+        perguntas: [
+          `Você sabe qual percentual de imposto paga ao comprar um produto no mercado?`,
+
+          `Como os tributos incidentes sobre uma compra aparecem na nota fiscal do consumidor final e quais limitações existem nessa informação?`,
+
+          `Como a falta de transparência tributária afeta o senso de cidadania?`,
+
+          `Os produtos importados pagam mais ou menos impostos do que os produtos nacionais?`,
+
+          `Os alimentos da cesta básica possuem tributação reduzida? Como isso funciona na prática?`,
+
+          `Um celular comprado em uma loja física e outro comprado pela internet pagam impostos diferentes?`,
+
+          `O que o IPI representa na cadeia de produção industrial?`,
+
+          `Qual é o impacto do ICMS na composição do preço de eletrônicos, alimentos e combustíveis?`,
+
+          `Qual é a diferença entre tributar a produção e tributar o consumo?`,
+
+          `Por que os impostos indiretos são considerados regressivos?`
+        ]
+      },
+
+      {
+        titulo: "🔸 Impacto social dos impostos indiretos",
+        perguntas: [
+          `Quem paga proporcionalmente mais impostos: quem ganha R$ 1.500 ou quem ganha R$ 15.000?`,
+
+          `Uma família de baixa renda que consome tudo o que ganha é mais afetada do que uma família rica que poupa parte da renda?`,
+
+          `Como o imposto sobre a energia elétrica afeta o custo de vida das famílias que vivem nas periferias?`,
+
+          `O transporte público é isento de impostos? E o combustível utilizado pelos ônibus?`,
+
+          `Compare, com dados oficiais e metodologia explícita, a tributação de um medicamento genérico e de uma joia importada. Em quais situações uma dessas cargas pode ser maior?`
+        ]
+      },
+
+      {
+        titulo: "🔸 Empresas e formação de preços",
+        perguntas: [
+          `Como as empresas calculam os preços com base na carga tributária?`,
+
+          `Qual é a diferença entre repassar e absorver um imposto no preço de venda?`,
+
+          `Em quais setores os impostos podem representar mais de 40% do preço final?`,
+
+          `O preço de um produto ou serviço é mais influenciado pelo custo de produção ou pelos impostos?`,
+
+          `Qual é a responsabilidade das empresas em esclarecer o peso dos tributos no preço final?`
+        ]
+      },
+
+      {
+        titulo: "🔸 Regimes tributários das empresas",
+        perguntas: [
+          `Qual é a lógica do Simples Nacional e por que ele pode ser vantajoso para as microempresas?`,
+
+          `O Lucro Presumido é justo para prestadores de serviços, como médicos e advogados?`,
+
+          `Como o Lucro Real obriga as empresas a apurarem exatamente os lucros tributáveis?`,
+
+          `As empresas enquadradas no Lucro Real sempre pagam mais impostos?`,
+
+          `As grandes empresas conseguem reduzir legalmente a carga tributária por meio de planejamento?`,
+
+          `Existe isonomia entre pequenas e grandes empresas no acesso ao crédito e aos benefícios fiscais?`,
+
+          `Uma empresa que paga menos impostos possui uma vantagem desleal sobre a concorrência?`,
+
+          `A carga tributária média sobre as empresas brasileiras é compatível com a dos países da OCDE?`,
+
+          `Por que tantas empresas mantêm suas sedes em paraísos fiscais, mesmo vendendo no Brasil?`,
+
+          `Analise o cenário da eleição presidencial brasileira de 2026 como um retrato provisório do momento, nunca como previsão definitiva. Responda à pergunta “quem venceria se a eleição fosse realizada agora?” utilizando as pesquisas nacionais mais recentes e verificáveis. Compare institutos, datas de campo, margens de erro, cenários de primeiro e segundo turnos, rejeição e tendências.
+
+Diferencie liderança numérica, empate técnico, favoritismo e possibilidade real de vitória. Apresente uma síntese equilibrada sobre os nomes efetivamente relevantes no momento da consulta.
+
+Identifique vantagens, fragilidades, públicos fortes, obstáculos e possíveis alianças.
+
+Entregue obrigatoriamente uma imagem, gráfico ou infográfico em formato paisagem, contendo barras de intenção de voto, comparação das redes sociais, legenda, data, horário, fontes, metodologia e aviso de incerteza.
+
+Use linguagem clara, apartidária, verificável e ética. Indique claramente quais conclusões são fatos, inferências, cenários ou hipóteses ainda não comprovadas.`
+        ]
+      },
+
+      {
+        titulo:
+          "🔹 Duas análises derivadas do cenário eleitoral de 2026",
+        perguntas: [
+          `Com base na análise eleitoral mais recente, compare exclusivamente a presença digital dos principais nomes competitivos nos últimos 30 dias.
+
+Examine crescimento de seguidores, alcance, engajamento, temas dominantes, sentimento das interações e episódios de maior repercussão.
+
+Diferencie dados verificados, estimativas e inferências. Não invente métricas.
+
+Entregue um infográfico em formato paisagem, contendo data, horário, fontes, método e aviso de incerteza.`,
+
+          `Com base na análise eleitoral mais recente, construa três cenários provisórios para a eleição presidencial de 2026:
+
+1. continuidade da liderança atual;
+2. disputa em empate técnico;
+3. mudança de liderança.
+
+Use as pesquisas nacionais mais recentes, explique quais fatos ou eventos poderiam fortalecer cada cenário e classifique cada conclusão como fato, inferência ou hipótese.
+
+Entregue um infográfico paisagem, claro, apartidário e verificável.`
+        ]
+      }
+    ];
+
+
+    function normalizarTextoPergunta(texto) {
+      const normalizado = String(texto || "")
+        .replace(/\r\n?/g, "\n")
+        .replace(/[ \t]+$/gm, "")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+
+      if (!normalizado) {
+        return "";
+      }
+
+      if (/[.!?…”’)]$/.test(normalizado)) {
+        return normalizado;
+      }
+
+      return `${normalizado}.`;
+    }
+
+    function contemTermo(texto, termos) {
+      const base = texto.toLocaleLowerCase("pt-BR");
+
+      return termos.some(function (termo) {
+        return base.includes(termo);
+      });
+    }
+
+    function ehPerguntaAtualizavel(pergunta) {
+      return contemTermo(pergunta, TERMOS_ATUALIZAVEIS);
+    }
+
+    function ehPedidoVisual(pergunta) {
+      return contemTermo(pergunta, TERMOS_VISUAIS);
+    }
+
+    function diretrizIdentidadeInstitucional() {
+      const identidade =
+        configuracaoVisual.identidade_institucional;
+
+      return [
+        "IDENTIDADE INSTITUCIONAL OBRIGATÓRIA",
+        `Título: ${identidade.titulo}`,
+        `Usuário: ${identidade.usuario}`,
+        `Descrição: ${identidade.descricao}`,
+        `Posicionamento: ${identidade.posicionamento_preferencial}`,
+        `Estilo: ${identidade.estilo}`,
+        `Cores: ${identidade.cores_preferenciais.join(", ")}`,
+        "Regras:",
+        ...identidade.regras.map(function (regra) {
+          return `- ${regra}`;
+        })
+      ].join("\n");
+    }
+
+    function diretrizFotografiasReais() {
+      return [
+        "FOTOGRAFIAS E NOMES",
+        "- Quando a peça abordar pessoas reais nomeadas, use fotografias reais fornecidas ou verificadas.",
+        "- Associe cada fotografia ao nome correto por legenda clara e inequívoca.",
+        "- Não substitua pessoa nomeada por retrato genérico ou imagem sintética apresentada como documental.",
+        "- Não atribua identidade a uma pessoa apenas pela aparência da fotografia.",
+        "- Se a fotografia necessária não estiver disponível ou confirmada, solicite o arquivo ou produza apenas a especificação de layout.",
+        "- Não cubra rosto, mãos, livros, joias, produtos ou elementos principais."
+      ].join("\n");
+    }
+
+    function construirPromptPadronizado(pergunta) {
+      const texto = normalizarTextoPergunta(pergunta);
+      const blocos = [
+        texto,
+        "",
+        "PADRÃO EDITORIAL DE RESPOSTA",
+        `- ${PADRAO_EDITORIAL.resposta}`,
+        `- ${PADRAO_EDITORIAL.neutralidade}`,
+        `- ${PADRAO_EDITORIAL.direitos}`
+      ];
+
+      if (ehPerguntaAtualizavel(texto)) {
+        blocos.push(`- ${PADRAO_EDITORIAL.fontes}`);
+      }
+
+      if (ehPedidoVisual(texto)) {
+        blocos.push(
+          `- ${PADRAO_EDITORIAL.visual}`,
+          "",
+          diretrizIdentidadeInstitucional(),
+          "",
+          diretrizFotografiasReais()
+        );
+      }
+
+      return blocos.join("\n").trim();
+    }
+
+    function validarIdentidadeInstitucional() {
+      const identidade =
+        configuracaoVisual.identidade_institucional;
+
+      const erros = [];
+
+      if (identidade.titulo !== "Professor Dr. Fadal") {
+        erros.push("O título institucional foi alterado.");
+      }
+
+      if (identidade.usuario !== "@fadalprofdr") {
+        erros.push("O usuário institucional foi alterado.");
+      }
+
+      if (
+        !Array.isArray(identidade.regras) ||
+        identidade.regras.length < 8
+      ) {
+        erros.push("As regras institucionais estão incompletas.");
+      }
+
+      return erros;
+    }
+
+    function exibirErroProducao(mensagem) {
+      const elemento = document.getElementById(
+        "erro-producao"
+      );
+
+      if (!elemento) {
+        return;
+      }
+
+      elemento.textContent = mensagem;
+      elemento.classList.add("visivel");
+    }
+
+    function validarModoProducao() {
+      if (!MODO_PRODUCAO) {
+        return;
+      }
+
+      const erros = validarIdentidadeInstitucional();
+
+      if (erros.length > 0) {
+        exibirErroProducao(
+          `Falha de identidade institucional: ${erros.join(" ")}`
+        );
+        return;
+      }
+
+      const status = document.getElementById(
+        "status-producao"
+      );
+
+      if (status) {
+        status.textContent =
+          `Modo de produção ativo — versão ${VERSAO_APLICACAO}: identidade, autoria e critérios visuais validados.`;
+      }
+    }
+
+    function abrirLinkSeguro(url) {
+      try {
+        const novaJanela = window.open(
+          url,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+        if (novaJanela) {
+          try {
+            novaJanela.opener = null;
+          } catch (erro) {
+            console.warn(
+              "Não foi possível remover a referência da nova janela.",
+              erro
+            );
+          }
+        }
+      } catch (erro) {
+        console.error("Não foi possível abrir o endereço.", erro);
+      }
+    }
+
+    function abrirWhatsApp() {
+      const mensagem =
+        "Olá! Quero conhecer os projetos éticos, editoriais e institucionais do Professor Dr. Fadal. Pode me enviar mais detalhes?";
+
+      const url =
+        "https://wa.me/5519981778535?text=" +
+        encodeURIComponent(mensagem);
+
+      abrirLinkSeguro(url);
+    }
+
+    function criarUrlGPT(pergunta) {
+      const url = new URL(LINK_GPT);
+
+      if (pergunta.length <= LIMITE_URL_PROMPT) {
+        url.searchParams.set("prompt", pergunta);
+      }
+
+      return url.toString();
+    }
+
+    function obterChaveContador(identificador) {
+      return PREFIXO_CONTADOR + identificador;
+    }
+
+    function obterInteracoes(identificador) {
+      try {
+        const valorSalvo = Number.parseInt(
+          localStorage.getItem(obterChaveContador(identificador)),
+          10
+        );
+
+        if (Number.isFinite(valorSalvo) && valorSalvo >= 0) {
+          return valorSalvo;
+        }
+      } catch (erro) {
+        console.warn(
+          "O armazenamento local não está disponível.",
+          erro
+        );
+      }
+
+      return 0;
+    }
+
+    function registrarInteracao(identificador) {
+      const novoValor = obterInteracoes(identificador) + 1;
+
+      try {
+        localStorage.setItem(
+          obterChaveContador(identificador),
+          String(novoValor)
+        );
+      } catch (erro) {
+        console.warn(
+          "A interação foi contada somente nesta exibição.",
+          erro
+        );
+      }
+
+      return novoValor;
+    }
+
+    function atualizarContador(
+      elemento,
+      identificador,
+      valorPersonalizado
+    ) {
+      if (!elemento) {
+        return;
+      }
+
+      const valor =
+        typeof valorPersonalizado === "number"
+          ? valorPersonalizado
+          : obterInteracoes(identificador);
+
+      elemento.textContent =
+        `Interações neste dispositivo: ${valor}`;
+    }
+
+    function mostrarStatus(
+      botao,
+      elementoStatus,
+      mensagem,
+      aviso
+    ) {
+      if (!elementoStatus || !botao) {
+        return;
+      }
+
+      if (botao._temporizadorStatus) {
+        window.clearTimeout(botao._temporizadorStatus);
+      }
+
+      elementoStatus.textContent = mensagem;
+      elementoStatus.classList.toggle("aviso", Boolean(aviso));
+      elementoStatus.classList.add("visivel");
+      botao.classList.add("copiado");
+
+      botao._temporizadorStatus = window.setTimeout(
+        function () {
+          elementoStatus.classList.remove("visivel");
+          elementoStatus.classList.remove("aviso");
+          botao.classList.remove("copiado");
+        },
+        4500
+      );
+    }
+
+    function copiarTextoAlternativamente(texto) {
+      const campoTemporario = document.createElement("textarea");
+
+      campoTemporario.value = texto;
+      campoTemporario.setAttribute("readonly", "");
+      campoTemporario.style.position = "fixed";
+      campoTemporario.style.left = "-9999px";
+      campoTemporario.style.top = "0";
+
+      document.body.appendChild(campoTemporario);
+      campoTemporario.focus();
+      campoTemporario.select();
+
+      let copiado = false;
+
+      try {
+        copiado = document.execCommand("copy");
+      } catch (erro) {
+        console.warn(
+          "Não foi possível copiar o texto automaticamente.",
+          erro
+        );
+      }
+
+      document.body.removeChild(campoTemporario);
+
+      return copiado;
+    }
+
+    function copiarTexto(texto) {
+      if (
+        navigator.clipboard &&
+        typeof navigator.clipboard.writeText === "function" &&
+        window.isSecureContext
+      ) {
+        return navigator.clipboard
+          .writeText(texto)
+          .then(function () {
+            return true;
+          })
+          .catch(function () {
+            return copiarTextoAlternativamente(texto);
+          });
+      }
+
+      return Promise.resolve(
+        copiarTextoAlternativamente(texto)
+      );
+    }
+
+    function copiarAbrirGPT(
+      pergunta,
+      botao,
+      contador,
+      elementoStatus,
+      identificador
+    ) {
+      const perguntaFinal =
+        construirPromptPadronizado(pergunta);
+
+      const url = criarUrlGPT(perguntaFinal);
+
+      let novaJanela = null;
+
+      try {
+        novaJanela = window.open(
+          url,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+        if (novaJanela) {
+          try {
+            novaJanela.opener = null;
+          } catch (erro) {
+            console.warn(
+              "Não foi possível remover a referência da janela.",
+              erro
+            );
+          }
+        }
+      } catch (erro) {
+        console.error(
+          "Não foi possível abrir o GPT.",
+          erro
+        );
+      }
+
+      const novoTotal = registrarInteracao(identificador);
+
+      atualizarContador(
+        contador,
+        identificador,
+        novoTotal
+      );
+
+      copiarTexto(perguntaFinal).then(function (foiCopiado) {
+        if (foiCopiado && novaJanela) {
+          mostrarStatus(
+            botao,
+            elementoStatus,
+            "✅ Texto padronizado copiado e GPT aberto. Confira o conteúdo e pressione Enviar.",
+            false
+          );
+          return;
+        }
+
+        if (foiCopiado && !novaJanela) {
+          mostrarStatus(
+            botao,
+            elementoStatus,
+            "✅ Texto padronizado copiado. Permita pop-ups ou abra o GPT e cole o conteúdo.",
+            true
+          );
+          return;
+        }
+
+        if (!foiCopiado && novaJanela) {
+          mostrarStatus(
+            botao,
+            elementoStatus,
+            "⚠️ GPT aberto. Confira o texto preenchido ou copie a pergunta manualmente.",
+            true
+          );
+          return;
+        }
+
+        mostrarStatus(
+          botao,
+          elementoStatus,
+          "⚠️ Não foi possível abrir o GPT automaticamente. Permita pop-ups e tente novamente.",
+          true
+        );
+      });
+    }
+
+    function criarPainelPerguntas() {
+      const painel = document.getElementById(
+        "painel-perguntas"
+      );
+
+      if (!painel) {
+        return;
+      }
+
+      grupos.forEach(function (grupo, indiceGrupo) {
+        const secao = document.createElement("section");
+        const titulo = document.createElement("h2");
+        const linha = document.createElement("div");
+
+        const idTitulo = `grupo-titulo-${indiceGrupo}`;
+
+        secao.className = "grupo-perguntas";
+        secao.setAttribute("aria-labelledby", idTitulo);
+
+        titulo.id = idTitulo;
+        titulo.className = "grupo-titulo";
+        titulo.textContent = grupo.titulo;
+
+        linha.className = "linha-perguntas";
+
+        secao.appendChild(titulo);
+
+        grupo.perguntas.forEach(function (
+          pergunta,
+          indicePergunta
+        ) {
+          const botao = document.createElement("button");
+          const texto = document.createElement("span");
+          const rodape = document.createElement("span");
+          const acao = document.createElement("span");
+          const contador = document.createElement("span");
+          const status = document.createElement("span");
+
+          const identificador =
+            `grupo-${indiceGrupo}-pergunta-${indicePergunta}`;
+
+          botao.type = "button";
+          botao.className = "pergunta";
+
+          const perguntaNormalizada =
+            normalizarTextoPergunta(pergunta);
+
+          texto.className = "texto-pergunta";
+          texto.textContent = perguntaNormalizada;
+
+          rodape.className = "rodape-pergunta";
+
+          acao.className = "acao-gpt";
+          acao.textContent = "Abrir no GPT";
+
+          contador.className = "contador-acessos";
+
+          atualizarContador(
+            contador,
+            identificador
+          );
+
+          status.className = "status-envio";
+          status.setAttribute("role", "status");
+          status.setAttribute("aria-live", "polite");
+
+          rodape.appendChild(acao);
+          rodape.appendChild(contador);
+
+          botao.appendChild(texto);
+          botao.appendChild(rodape);
+          botao.appendChild(status);
+
+          botao.setAttribute(
+            "aria-label",
+            `${perguntaNormalizada} Copiar e abrir no GPT.`
+          );
+
+          botao.addEventListener(
+            "click",
+            function () {
+              copiarAbrirGPT(
+                pergunta,
+                botao,
+                contador,
+                status,
+                identificador
+              );
+            }
+          );
+
+          linha.appendChild(botao);
+        });
+
+        secao.appendChild(linha);
+        painel.appendChild(secao);
+      });
+    }
+
+    function separarPalavras(texto) {
+      const conteudo = texto.trim();
+
+      if (!conteudo) {
+        return [];
+      }
+
+      return conteudo.split(/\s+/);
+    }
+
+
+    function limparListaNomes(texto) {
+      return String(texto || "")
+        .split(/[;\n,]+/)
+        .map(function (nome) {
+          return nome.trim();
+        })
+        .filter(Boolean);
+    }
+
+    function construirPromptVisual() {
+      const tipo = document.getElementById(
+        "tipo-peca-visual"
+      );
+
+      const formato = document.getElementById(
+        "formato-peca-visual"
+      );
+
+      const tema = document.getElementById(
+        "tema-peca-visual"
+      );
+
+      const pessoas = document.getElementById(
+        "pessoas-peca-visual"
+      );
+
+      const origemFotos = document.getElementById(
+        "origem-fotos-visual"
+      );
+
+      const posicao = document.getElementById(
+        "posicao-identidade-visual"
+      );
+
+      const nomes = limparListaNomes(
+        pessoas ? pessoas.value : ""
+      );
+
+      const temaFinal = normalizarTextoPergunta(
+        tema ? tema.value : ""
+      );
+
+      if (!temaFinal) {
+        return {
+          erro:
+            "Descreva o tema e a mensagem central antes de gerar o prompt."
+        };
+      }
+
+      if (
+        nomes.length > 0 &&
+        origemFotos &&
+        origemFotos.value === "não utilizar pessoas na peça"
+      ) {
+        return {
+          erro:
+            "Há nomes informados, mas a opção selecionada determina não utilizar pessoas."
+        };
+      }
+
+      const identidade =
+        configuracaoVisual.identidade_institucional;
+
+      const linhas = [
+        `Crie uma peça do tipo ${tipo.value}, no formato ${formato.value}.`,
+        "",
+        "TEMA E MENSAGEM CENTRAL",
+        temaFinal,
+        "",
+        "DIREÇÃO DE ARTE",
+        `- Estilo: ${identidade.estilo}.`,
+        `- Paleta: ${identidade.cores_preferenciais.join(", ")}.`,
+        `- Identidade institucional em ${posicao.value}.`,
+        "- Manter hierarquia tipográfica clara, contraste alto e margem segura.",
+        "- Não usar tipografia infantil, efeitos neon ou texto sobre área poluída.",
+        "- Não inventar palavras, nomes, títulos, números ou citações.",
+        "- Preservar integralmente rosto, mãos, livros, joias, produtos e elementos principais."
+      ];
+
+      if (tipo.value.includes("caligrama")) {
+        linhas.push(
+          "- No caligrama, integrar forma e sentido sem deformar palavras, cortar frases ou comprometer a leitura.",
+          "- Usar estrutura textual orgânica, simbólica e editorialmente controlada."
+        );
+      }
+
+      linhas.push(
+        "",
+        "IDENTIDADE INSTITUCIONAL",
+        `- Título: ${identidade.titulo}`,
+        `- Usuário: ${identidade.usuario}`,
+        `- Descrição: ${identidade.descricao}`,
+        `- Escrever ${identidade.titulo} e ${identidade.usuario} exatamente desta forma.`
+      );
+
+      if (nomes.length > 0) {
+        linhas.push(
+          "",
+          "PESSOAS REAIS ABORDADAS",
+          `- Nomes: ${nomes.join("; ")}.`,
+          `- Procedimento: ${origemFotos.value}.`,
+          "- Usar somente fotografias reais fornecidas ou verificadas.",
+          "- Associar cada fotografia ao nome correto por legenda inequívoca.",
+          "- Não criar sósia, retrato genérico ou imagem sintética apresentada como fotografia documental.",
+          "- Se faltar fotografia confirmada, interromper a composição dessa pessoa e solicitar o arquivo correto.",
+          "- Não deduzir identidade com base apenas na aparência da fotografia."
+        );
+      } else {
+        linhas.push(
+          "",
+          "PESSOAS",
+          "- Nenhuma pessoa real foi nomeada. Não inserir rostos identificáveis por iniciativa própria."
+        );
+      }
+
+      linhas.push(
+        "",
+        "ENTREGA",
+        "- Produzir composição final com alta legibilidade.",
+        "- Conferir ortografia, nomes próprios, números e assinatura antes da entrega.",
+        "- Caso a ferramenta visual não consiga reproduzir textos longos com fidelidade, entregar também a especificação de layout e o texto final separado, sem inventar conteúdo."
+      );
+
+      return {
+        prompt: linhas.join("\n")
+      };
+    }
+
+    function configurarEstudioVisual() {
+      const gerar = document.getElementById(
+        "gerar-prompt-visual"
+      );
+
+      const abrir = document.getElementById(
+        "abrir-prompt-visual"
+      );
+
+      const saida = document.getElementById(
+        "saida-prompt-visual"
+      );
+
+      const status = document.getElementById(
+        "status-estudio-visual"
+      );
+
+      if (!gerar || !abrir || !saida) {
+        return;
+      }
+
+      gerar.addEventListener("click", function () {
+        const resultado = construirPromptVisual();
+
+        if (resultado.erro) {
+          saida.value = "";
+          abrir.disabled = true;
+          mostrarStatus(
+            gerar,
+            status,
+            `⚠️ ${resultado.erro}`,
+            true
+          );
+          return;
+        }
+
+        saida.value = resultado.prompt;
+        abrir.disabled = false;
+
+        mostrarStatus(
+          gerar,
+          status,
+          "✅ Prompt técnico gerado e validado.",
+          false
+        );
+      });
+
+      abrir.addEventListener("click", function () {
+        const prompt = saida.value.trim();
+
+        if (!prompt) {
+          mostrarStatus(
+            abrir,
+            status,
+            "⚠️ Gere o prompt técnico antes de abrir o GPT.",
+            true
+          );
+          return;
+        }
+
+        copiarAbrirGPT(
+          prompt,
+          abrir,
+          null,
+          status,
+          "estudio-visual"
+        );
+      });
+    }
+
+    function configurarPerguntaLivre() {
+      const campo = document.getElementById(
+        "campo-pergunta-livre"
+      );
+
+      const botao = document.getElementById(
+        "botao-pergunta-livre"
+      );
+
+      const contadorPalavras = document.getElementById(
+        "contador-palavras-livre"
+      );
+
+      const contadorAcessos = document.getElementById(
+        "contador-acessos-livre"
+      );
+
+      const status = document.getElementById(
+        "status-pergunta-livre"
+      );
+
+      if (!campo || !botao) {
+        return;
+      }
+
+      function limitarPergunta() {
+        const palavras = separarPalavras(campo.value);
+
+        if (palavras.length > LIMITE_PALAVRAS) {
+          campo.value = palavras
+            .slice(0, LIMITE_PALAVRAS)
+            .join(" ");
+        }
+
+        const total = separarPalavras(
+          campo.value
+        ).length;
+
+        if (contadorPalavras) {
+          contadorPalavras.textContent =
+            `${total} de ${LIMITE_PALAVRAS} palavras`;
+        }
+      }
+
+      campo.addEventListener(
+        "input",
+        limitarPergunta
+      );
+
+      botao.addEventListener(
+        "click",
+        function () {
+          const pergunta = campo.value.trim();
+
+          if (!pergunta) {
+            mostrarStatus(
+              botao,
+              status,
+              "⚠️ Digite uma pergunta antes de abrir o GPT.",
+              true
+            );
+
+            campo.focus();
+            return;
+          }
+
+          copiarAbrirGPT(
+            pergunta,
+            botao,
+            contadorAcessos,
+            status,
+            "pergunta-livre"
+          );
+        }
+      );
+
+      atualizarContador(
+        contadorAcessos,
+        "pergunta-livre"
+      );
+    }
+
+    function configurarBotaoPrincipal() {
+      const botao = document.getElementById(
+        "btnPerguntaOraculo"
+      );
+
+      const contador = document.getElementById(
+        "contador-oraculo"
+      );
+
+      const status = document.getElementById(
+        "status-oraculo"
+      );
+
+      if (!botao) {
+        return;
+      }
+
+      const perguntaPrincipal = `Realize uma análise eleitoral atualizada, neutra e verificável sobre a eleição presidencial brasileira de 2026.
+
+Responda à seguinte pergunta: se a eleição fosse realizada no momento da consulta, qual candidato ou campo político apresentaria a maior probabilidade de vitória segundo os dados públicos disponíveis?
+
+Informe obrigatoriamente:
+- data e horário da consulta, no horário de Brasília;
+- pesquisas eleitorais mais recentes;
+- datas de campo e de publicação;
+- institutos responsáveis;
+- margem de erro e tamanho das amostras;
+- cenários de primeiro e segundo turnos;
+- situação jurídica e eleitoral dos nomes analisados;
+- fatores econômicos, políticos e sociais relevantes;
+- limitações da análise.
+
+Analise as redes sociais somente dos candidatos ou nomes com dados públicos suficientes. Diferencie número de seguidores, crescimento, alcance, engajamento e repercussão. Não invente métricas e não trate popularidade digital como equivalente automático de intenção de voto.
+
+Crie um infográfico ou gráfico editorial, apartidário e legível, contendo:
+- veredito provisório;
+- pesquisas mais recentes;
+- comparação dos principais cenários;
+- movimentação digital;
+- grau de confiança;
+- fatores capazes de alterar a projeção.
+
+Declare expressamente que a projeção não é resultado oficial nem garantia do resultado eleitoral.`;
+
+      botao.addEventListener(
+        "click",
+        function () {
+          copiarAbrirGPT(
+            perguntaPrincipal,
+            botao,
+            contador,
+            status,
+            "pergunta-principal"
+          );
+        }
+      );
+
+      atualizarContador(
+        contador,
+        "pergunta-principal"
+      );
+    }
+
+    function atualizarDataOraculo() {
+      const elemento = document.getElementById(
+        "data-oraculo"
+      );
+
+      if (!elemento) {
+        return;
+      }
+
+      try {
+        const dataFormatada =
+          new Intl.DateTimeFormat(
+            "pt-BR",
+            {
+              timeZone: "America/Sao_Paulo",
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric"
+            }
+          ).format(new Date());
+
+        elemento.textContent =
+          `(Oráculo de Brasília — ${dataFormatada})`;
+      } catch (erro) {
+        console.warn(
+          "Não foi possível formatar a data.",
+          erro
+        );
+
+        elemento.textContent = "";
+      }
+    }
+
+    function obterParametroNome() {
+      return (
+        new URLSearchParams(
+          window.location.search
+        ).get("nome") || "Visitante"
+      );
+    }
+
+    function mensagemPorPeriodo() {
+      let horaBrasilia;
+
+      try {
+        horaBrasilia = Number(
+          new Intl.DateTimeFormat(
+            "pt-BR",
+            {
+              timeZone: "America/Sao_Paulo",
+              hour: "2-digit",
+              hour12: false
+            }
+          ).format(new Date())
+        );
+      } catch (erro) {
+        horaBrasilia = new Date().getHours();
+      }
+
+      if (horaBrasilia >= 5 && horaBrasilia < 12) {
+        return "☀️ Manhã: inspire-se com o que ainda não foi feito.";
+      }
+
+      if (horaBrasilia >= 12 && horaBrasilia < 18) {
+        return "🌤️ Tarde: confie no gesto mais simples — é ele que transforma.";
+      }
+
+      return "🌙 Noite: reflita com ternura: você tocou algo hoje?";
+    }
+
+    function configurarBoasVindas() {
+      const boasVindas = document.getElementById(
+        "boasVindas"
+      );
+
+      const mensagemDinamica =
+        document.getElementById(
+          "mensagemDinamica"
+        );
+
+      if (boasVindas) {
+        boasVindas.textContent =
+          `💚 Bem-vindo, ${obterParametroNome()}!`;
+      }
+
+      if (mensagemDinamica) {
+        mensagemDinamica.textContent =
+          mensagemPorPeriodo();
+      }
+    }
+
+    let daltonismoAtivo = false;
+    let cssDaltonismo = null;
+
+    function mostrarTooltipDaltonismo() {
+      const tooltip = document.getElementById(
+        "daltonismo-tooltip-gpt"
+      );
+
+      const botao = document.getElementById(
+        "botao-daltonismo-gpt"
+      );
+
+      if (!tooltip || !botao) {
+        return;
+      }
+
+      tooltip.innerHTML = `
+        <b>O que é daltonismo?</b><br>
+        Daltonismo é uma condição em que o olho humano não percebe algumas
+        cores corretamente, afetando principalmente o vermelho, o verde ou
+        o azul. Existem vários tipos, como protanopia, deuteranopia e
+        tritanopia.<br><br>
+
+        <b>Como este filtro ajuda?</b><br>
+        O filtro modifica as cores, amplia o contraste e pode facilitar a
+        leitura. Como as necessidades visuais variam, o usuário pode
+        ativá-lo ou desativá-lo livremente.
+      `;
+
+      const posicao = botao.getBoundingClientRect();
+
+      tooltip.style.left =
+        `${posicao.left +
+          window.scrollX +
+          posicao.width / 2}px`;
+
+      tooltip.style.top =
+        `${posicao.bottom +
+          window.scrollY +
+          10}px`;
+
+      tooltip.style.display = "block";
+    }
+
+    function esconderTooltipDaltonismo() {
+      const tooltip = document.getElementById(
+        "daltonismo-tooltip-gpt"
+      );
+
+      if (tooltip) {
+        tooltip.style.display = "none";
+      }
+    }
+
+    function ativarFiltroDaltonismo() {
+      if (cssDaltonismo) {
+        cssDaltonismo.disabled = false;
+
+        const svgExistente =
+          document.getElementById(
+            "svg-daltonismo-gpt"
+          );
+
+        if (svgExistente) {
+          svgExistente.style.display = "";
+        }
+      } else {
+        cssDaltonismo =
+          document.createElement("style");
+
+        cssDaltonismo.id =
+          "filtro-daltonismo-gpt";
+
+        cssDaltonismo.textContent = `
+          html {
+            filter:
+              url("#daltonismo-svg-filter-gpt")
+              contrast(1.18)
+              brightness(1.10)
+              saturate(1.55) !important;
+          }
+
+          img,
+          video {
+            filter:
+              url("#daltonismo-svg-filter-gpt")
+              contrast(1.15)
+              brightness(1.10)
+              saturate(1.40) !important;
+          }
+        `;
+
+        document.head.appendChild(
+          cssDaltonismo
+        );
+
+        const svg = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "svg"
+        );
+
+        svg.id = "svg-daltonismo-gpt";
+        svg.setAttribute(
+          "style",
+          "height:0;width:0;position:absolute"
+        );
+
+        svg.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+        svg.innerHTML = `
+          <filter id="daltonismo-svg-filter-gpt">
+            <feColorMatrix
+              type="matrix"
+              values="
+                0.80 0.20 0 0 0
+                0.20 0.80 0 0 0
+                0 0.20 0.80 0 0
+                0 0 0 1 0
+              "
+            ></feColorMatrix>
+
+            <feComponentTransfer>
+              <feFuncR
+                type="linear"
+                slope="1.12"
+              ></feFuncR>
+
+              <feFuncG
+                type="linear"
+                slope="1.18"
+              ></feFuncG>
+
+              <feFuncB
+                type="linear"
+                slope="1.25"
+              ></feFuncB>
+            </feComponentTransfer>
+          </filter>
+        `;
+
+        document.body.appendChild(svg);
+      }
+
+      const estado = document.getElementById(
+        "estado-daltonismo-gpt"
+      );
+
+      const botao = document.getElementById(
+        "botao-daltonismo-gpt"
+      );
+
+      if (estado) {
+        estado.textContent = "Ativado";
+      }
+
+      if (botao) {
+        botao.setAttribute(
+          "aria-pressed",
+          "true"
+        );
+      }
+
+      daltonismoAtivo = true;
+    }
+
+    function desativarFiltroDaltonismo() {
+      if (cssDaltonismo) {
+        cssDaltonismo.disabled = true;
+      }
+
+      const svg = document.getElementById(
+        "svg-daltonismo-gpt"
+      );
+
+      if (svg) {
+        svg.style.display = "none";
+      }
+
+      const estado = document.getElementById(
+        "estado-daltonismo-gpt"
+      );
+
+      const botao = document.getElementById(
+        "botao-daltonismo-gpt"
+      );
+
+      if (estado) {
+        estado.textContent = "Desativado";
+      }
+
+      if (botao) {
+        botao.setAttribute(
+          "aria-pressed",
+          "false"
+        );
+      }
+
+      daltonismoAtivo = false;
+    }
+
+    function alternarDaltonismo() {
+      if (daltonismoAtivo) {
+        desativarFiltroDaltonismo();
+      } else {
+        ativarFiltroDaltonismo();
+      }
+    }
+
+    function configurarAlerta() {
+      const alerta = document.getElementById(
+        "alerta-gpt"
+      );
+
+      const botaoReexibir =
+        document.getElementById(
+          "botao-reexibir-alerta"
+        );
+
+      const botaoFechar =
+        document.getElementById(
+          "fechar-alerta"
+        );
+
+      let temporizadorOcultar = null;
+      let temporizadorDisplay = null;
+
+      function mostrarAlerta() {
+        if (!alerta) {
+          return;
+        }
+
+        if (temporizadorOcultar) {
+          window.clearTimeout(
+            temporizadorOcultar
+          );
+        }
+
+        if (temporizadorDisplay) {
+          window.clearTimeout(
+            temporizadorDisplay
+          );
+        }
+
+        alerta.style.display = "block";
+
+        window.setTimeout(function () {
+          alerta.style.opacity = "1";
+        }, 100);
+
+        temporizadorOcultar =
+          window.setTimeout(
+            esconderAlerta,
+            20000
+          );
+      }
+
+      function esconderAlerta() {
+        if (!alerta) {
+          return;
+        }
+
+        alerta.style.opacity = "0";
+
+        temporizadorDisplay =
+          window.setTimeout(
+            function () {
+              alerta.style.display = "none";
+            },
+            500
+          );
+      }
+
+      if (botaoReexibir) {
+        botaoReexibir.addEventListener(
+          "click",
+          mostrarAlerta
+        );
+      }
+
+      if (botaoFechar) {
+        botaoFechar.addEventListener(
+          "click",
+          esconderAlerta
+        );
+      }
+
+      window.setTimeout(
+        mostrarAlerta,
+        800
+      );
+    }
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+        validarModoProducao();
+        atualizarDataOraculo();
+        criarPainelPerguntas();
+        configurarPerguntaLivre();
+        configurarEstudioVisual();
+        configurarBotaoPrincipal();
+        configurarBoasVindas();
+        configurarAlerta();
+      }
+    );
+  </script>
+<section id="oraculo-gratis" style="max-width:1060px;margin:22px auto;padding:26px;border:2px solid #d4ae52;border-radius:18px;background:#091c32;color:#fff;font-family:Segoe UI,Arial,sans-serif"><h2 style="color:#f7d67a">🎁 EXPERIMENTE O ORÁCULO — 10 CONSULTAS GRÁTIS</h2><p>Faça uma inscrição simplificada para realizar até 10 pesquisas com fontes. A quantidade é por cadastro pessoal e navegador; a rede/IP também integra as medidas contra uso duplicado. Não exige pagamento.</p><div style="display:flex;flex-wrap:wrap;gap:9px"><input id="ofName" aria-label="Nome completo" placeholder="Nome completo" maxlength="120" style="flex:1;min-width:180px;padding:12px"><input id="ofEmail" type="email" aria-label="E-mail" placeholder="E-mail" maxlength="240" style="flex:1;min-width:180px;padding:12px"></div><label style="display:block;margin:12px 0"><input id="ofPrivacy" type="checkbox"> Concordo com o uso dos meus dados para cadastro, controle do benefício e prevenção de abuso, conforme a Política de Privacidade.</label><button id="ofRegister" type="button" style="padding:12px;background:#ddba60;color:#081a31;font-weight:700">Ativar minhas 10 consultas gratuitas</button><button id="ofResume" type="button" style="padding:12px;margin:6px;background:#dae5ef;color:#081a31">Usar meu acesso gratuito neste navegador</button><p id="ofResult" role="status" aria-live="polite"></p><hr style="border-color:#8c784d;margin:22px 0"><h3 style="color:#f7d67a">🏅 QUERO RECEBER OUTROS BÔNUS</h3><p>Inscrição separada e opcional para receber informações sobre futuras cortesias e benefícios. A inscrição não garante prêmios.</p><input id="ofBonusEmail" type="email" maxlength="240" placeholder="E-mail para receber informações" aria-label="E-mail para bônus" style="padding:12px;min-width:230px"><label style="display:block;margin:12px 0"><input id="ofBonusConsent" type="checkbox"> Desejo receber comunicações sobre novos bônus; posso cancelar minha inscrição.</label><button id="ofBonus" type="button" style="padding:12px;background:#ddba60;color:#081a31;font-weight:700">Inscrever-me para futuros bônus</button><button id="ofBonusCancel" type="button" style="padding:12px;background:#dae5ef;color:#081a31">Cancelar inscrição de bônus</button><p id="ofBonusResult" role="status" aria-live="polite"></p></section><script defer src="/oraculo-free.js"></script>
+<section id="oraculo-assinatura" style="max-width:1060px;margin:22px auto;padding:28px;border:1px solid #c5a255;border-radius:20px;background:#081a31;color:#fff;font-family:Segoe UI,Arial,sans-serif">
+<h2 style="color:#f7d67a">ORÁCULO 2026 — INFORMAÇÃO COM FONTES</h2>
+<p>Conheça a história das eleições de 2026 no Brasil. Faça perguntas e consulte análises com fontes oficiais verificáveis. Resultados, candidaturas e acontecimentos não devem ser considerados confirmados sem conferência nos órgãos oficiais.</p>
+<h3 style="color:#f7d67a">Acesso por R$ 30,00 — válido por 33 dias</h3>
+<p>Pagamento à mesma instituição bancária utilizada pelo RASTRO, sob conferência manual. O acesso só é ativado depois da confirmação administrativa. Não envie comprovantes com dados sigilosos no chat.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px"><input id="oraEmail" type="email" placeholder="E-mail do usuário" aria-label="E-mail do usuário" style="padding:12px;flex:1;min-width:220px"><input id="oraCode" placeholder="Código de acesso recebido" aria-label="Código de acesso" style="padding:12px;flex:1;min-width:240px"></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px"><button type="button" id="oraSave" style="padding:12px;background:#ddba60;color:#081a31;font-weight:700">Ativar meu acesso</button><button type="button" id="oraBuy" style="padding:12px">Como adquirir por R$ 30</button><button type="button" id="oraOfficial" style="padding:12px">Fontes oficiais</button></div>
+<div id="oraNotice" role="status" aria-live="polite"></div><div style="border:1px solid #8f7848;padding:16px;margin:12px 0;border-radius:12px"><h3 style="color:#f7d67a">Já realizou o pagamento? Registre sua solicitação</h3><p>Informe seu e-mail no campo acima e a referência bancária. O envio não confirma o pagamento e não libera automaticamente o acesso.</p><label for="oraCustomerRef">Referência da transação</label><input id="oraCustomerRef" maxlength="120" placeholder="Identificador da transferência (não forneça senhas)" style="padding:10px;max-width:100%;width:340px"> <button type="button" id="oraRequestPayment" style="padding:10px">Registrar pagamento para conferência</button><p id="oraPaymentNotice" role="status"></p></div>
+<label for="oraQuestion" style="font-weight:bold">Faça sua pergunta sobre a história e as eleições de 2026 no Brasil</label>
+<textarea id="oraQuestion" rows="4" maxlength="3000" placeholder="Ex.: Quais foram as principais etapas do calendário eleitoral de 2026? Cite as fontes oficiais." style="display:block;width:100%;padding:12px;margin:9px 0;color:#142237"></textarea>
+<button type="button" id="oraAsk" style="padding:14px 22px;background:#ddba60;color:#081a31;font-weight:700">Investigar com fontes</button>
+<pre id="oraAnswer" style="white-space:pre-wrap;word-break:break-word;font:15px/1.55 Segoe UI,Arial,sans-serif;padding:14px;background:#102b4a;color:#fff;border-radius:8px"></pre>
+<div id="oraSources"></div>
+<details style="margin-top:18px"><summary>Administração — liberar 33 dias após pagamento confirmado</summary><p>Área privada. Nunca compartilhe a credencial administrativa.</p><input id="oraAdminSecret" type="password" placeholder="Credencial administrativa" style="padding:10px"><input id="oraPaymentRef" placeholder="Referência de pagamento conferido" style="padding:10px"><button type="button" id="oraIssue" style="padding:10px">Emitir acesso pago</button><button type="button" id="oraListPayments" style="padding:10px;margin:5px">Ver pedidos de pagamento</button><div id="oraPaymentList" style="white-space:pre-wrap"></div><pre id="oraIssued" style="white-space:pre-wrap"></pre></details>
+</section><script defer src="/oraculo-api.js"></script>
+<script src="/oraculo-idiomas.js" defer></script>
+</body>
+</html>
