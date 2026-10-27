@@ -2331,7 +2331,10 @@ Entregue um infográfico paisagem, claro, apartidário e verificável.`
       const perguntaFinal =
         construirPromptPadronizado(pergunta);
 
-      const url = criarUrlGPT(perguntaFinal);
+      // Executa a pergunta diretamente pela API do Oráculo, sem exigir envio manual no ChatGPT.
+      try { sessionStorage.setItem('oraculo_studio_prompt', perguntaFinal); } catch (_) {}
+      window.location.href = '/estudio.html';
+      return;
 
       let novaJanela = null;
 
