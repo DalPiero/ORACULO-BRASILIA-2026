@@ -918,6 +918,33 @@ body{background:linear-gradient(180deg,#e8eef4 0%,#f8f6f0 38%,#f2f7f4 100%);colo
   <main id="conteudo-principal">
 
 <div style="max-width:940px;margin:20px auto;padding:20px;background:#fff8df;border:2px solid #ae8c3a;border-radius:18px;text-align:center;color:#29211a"><h2 style="color:#4a3512;margin:0 0 10px">Assine o Oráculo — R$ 30,00 por 33 dias</h2><p style="margin:8px 0 16px">Até 100 consultas no período. Pague por PIX e solicite a liberação após a conferência do recebimento.</p><a href="/assinar.html" style="display:inline-block;background:#163d63;color:white;padding:15px 25px;border-radius:10px;text-decoration:none;font-weight:bold;font-family:Arial,sans-serif">ASSINAR E PAGAR VIA PIX</a><p style="font-size:.85rem;margin:12px 0 0">Pagamento não é confirmado automaticamente. O acesso depende de conferência.</p></div>
+<style>
+.eixo-consulta{display:block;margin:12px auto 0;background:#142b42;color:#fff;border:1px solid #b49863;padding:12px 15px;border-radius:10px;cursor:pointer;font:600 15px Segoe UI,Arial,sans-serif}
+#oraculo-admin-inline{max-width:1000px;margin:22px auto;padding:22px;background:#102c43;color:#fff;border:1px solid #c1a368;border-radius:16px;text-align:left;font:16px/1.5 Segoe UI,Arial,sans-serif}
+#oraculo-admin-inline h2{color:#e6ce95}#oraculo-admin-inline input{padding:10px;border-radius:7px;border:1px solid #8c9cac;background:#fff;color:#182b3e;max-width:100%;margin:5px}
+#oraculo-admin-inline button{padding:11px 16px;background:#c2a269;border:0;border-radius:8px;color:#102337;font-weight:bold;cursor:pointer;margin:4px}
+#oraculo-admin-inline pre{white-space:pre-wrap;overflow-wrap:anywhere}#oraculo-admin-inline .admin-item{border-bottom:1px solid #6d8191;padding:10px 0}
+#oraculo-musica{max-width:1000px;margin:24px auto;background:#fff;padding:22px;border-radius:16px;color:#17283b;font:16px/1.5 Segoe UI,Arial,sans-serif}
+#oraculo-musica a{color:#175e89}#oraculo-musica li{padding:5px}
+</style>
+<section id="oraculo-musica"><h2>Repertório histórico: música e tradição maçônica</h2><p>Conheça a história das composições. A reprodução musical depende da disponibilidade e dos direitos de cada gravação; o site não inicia áudio sem autorização do visitante.</p><ol>
+<li>The Master's Song (1723) — História da Ordem</li>
+<li>The Enter'd Apprentice's Song (1722–1723) — Fraternidade e iniciação</li>
+<li>Canções de Naudot (1737) — Expansão europeia</li>
+<li>La Lire Maçonne (1766) — Cultura fraternal</li>
+<li>Lied zur Gesellenreise — Mozart (1785) — Busca da luz</li>
+<li>Die Maurerfreude — Mozart (1785) — Alegria maçônica</li>
+<li>Maurerische Trauermusik — Mozart (1785) — Memória e solenidade</li>
+<li>Die Zauberflöte — Mozart (1791) — Filosofia iniciática</li>
+<li>Kleine Freimaurer-Kantate — Mozart (1791) — União e fraternidade</li>
+<li>Masonic Ritual Music — Sibelius — Música ritual</li>
+</ol><p><a href="https://imslp.org/wiki/Maurerische_Trauermusik%2C_K.477_%28Mozart%2C_Wolfgang_Amadeus%29" target="_blank" rel="noopener noreferrer">Ouvir gravações disponíveis de Mozart e verificar licenças na biblioteca IMSLP</a></p></section>
+<section id="oraculo-admin-inline"><h2>Administração do Oráculo</h2><button type="button" id="oraAdminToggle" aria-expanded="false" aria-controls="oraAdminHidden">Mostrar administração</button><div id="oraAdminHidden" hidden>
+<p>Área exclusiva. A senha é verificada pelo servidor e não é armazenada no navegador.</p><form id="oraAdminLogin"><label for="oraInlinePassword">Senha do administrador:</label><input id="oraInlinePassword" type="password" required minlength="24" autocomplete="off"><button type="submit">Entrar</button><button type="button" id="oraInlineEye" aria-label="Mostrar ou ocultar senha">Mostrar/ocultar senha</button></form>
+<p id="oraInlineMessage" role="status"></p><div id="oraInlinePanel" hidden><button type="button" id="oraInlineRefresh">Atualizar solicitações</button><button type="button" id="oraInlineLogout">Sair</button><div id="oraInlineRequests"></div>
+<h3>Emitir acesso após conferir recebimento</h3><form id="oraInlineIssue"><input id="oraInlineEmail" type="email" required placeholder="E-mail do assinante"><input id="oraInlineRef" required minlength="6" maxlength="120" placeholder="Referência da transação"><label><input id="oraInlineConfirmed" type="checkbox" required> Confirmo ter verificado o pagamento no banco</label><button type="submit">Emitir código de acesso</button></form><pre id="oraInlineIssued"></pre></div></div></section>
+<script defer src="/oraculo-administracao-inline.js"></script>
+<script defer src="/oraculo-eixos.js"></script>
 <section class="oraculo-hero" id="eleicoes-2026-inicio" aria-labelledby="oraculo-titulo">
  <span class="oraculo-eyebrow">Oráculo de Brasília · História eleitoral · Brasil 2026</span>
  <h1 id="oraculo-titulo">CONHEÇA A <em>HISTÓRIA DAS ELEIÇÕES DE 2026</em> NO BRASIL</h1>
@@ -932,10 +959,10 @@ body{background:linear-gradient(180deg,#e8eef4 0%,#f8f6f0 38%,#f2f7f4 100%);colo
  <h2 id="oraculo-historia-title">História das eleições brasileiras de 2026 — acompanhe com fontes</h2>
  <p>Este espaço organiza o processo em quatro eixos. Consulte as fontes primárias antes de publicar conclusões ou números.</p>
  <div class="oraculo-timeline-grid">
-  <article><strong>01 · Antecedentes e instituições</strong>Constituição de 1988, Justiça Eleitoral, sistema de votação e evolução da democracia brasileira.</article>
-  <article><strong>02 · Calendário eleitoral</strong>Registro de candidaturas, propaganda, votação e demais etapas: confira datas e regras no TSE.</article>
-  <article><strong>03 · Campanhas e propostas</strong>Debates e programas eleitorais, separados de informações verificadas e de avaliações opinativas.</article>
-  <article><strong>04 · Resultados e decisões</strong>Apuração, dados oficiais, jurisprudência e desdobramentos: apresentar somente resultados publicados por órgãos competentes.</article>
+  <article><strong>01 · Antecedentes e instituições</strong><p>Constituição de 1988, Justiça Eleitoral, sistema de votação e evolução da democracia brasileira.</p><button type="button" class="eixo-consulta" data-eixo="antecedentes">Investigar antecedentes com fontes</button></article>
+  <article><strong>02 · Calendário eleitoral</strong><p>Registro de candidaturas, propaganda, votação e demais etapas: confira datas e regras no TSE.</p><button type="button" class="eixo-consulta" data-eixo="calendario">Consultar calendário no GPT do Oráculo</button></article>
+  <article><strong>03 · Campanhas e propostas</strong><p>Debates e programas eleitorais, separados de informações verificadas e de avaliações opinativas.</p><button type="button" class="eixo-consulta" data-eixo="campanhas">Investigar campanhas com fontes</button></article>
+  <article><strong>04 · Resultados e decisões</strong><p>Apuração, dados oficiais, jurisprudência e desdobramentos: apresentar somente resultados publicados por órgãos competentes.</p><button type="button" class="eixo-consulta" data-eixo="resultados">Consultar resultados e decisões</button></article>
  </div>
  <p><strong>Fontes oficiais para consultar:</strong> <a href="https://www.tse.jus.br/" target="_blank" rel="noopener noreferrer">Tribunal Superior Eleitoral</a> · <a href="https://www.tre-sp.jus.br/" target="_blank" rel="noopener noreferrer">Justiça Eleitoral — TRE-SP</a> · <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener noreferrer">Constituição Federal</a> · <a href="https://dadosabertos.tse.jus.br/" target="_blank" rel="noopener noreferrer">Dados abertos do TSE</a>.</p>
  <p class="oraculo-disclaimer">O pleito de 2026 ainda está em curso. Esta seção é um roteiro documental, não uma cronologia atualizada automaticamente. Não atribui resultados definitivos, não simula fontes nem presume vereditos.</p>
