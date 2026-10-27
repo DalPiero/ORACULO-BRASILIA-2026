@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
+      # Sem package-lock.json, o cache npm do setup-node falha antes dos testes.
       - run: npm install --omit=dev
       - run: |
           node --check server.js
@@ -22,11 +22,12 @@ jobs:
           node --check public/oraculo-musica.js
       - name: Check HTTP health and authentication
         run: |
-          npm start > /tmp/oraculo.log 2>&1 &
+          PORT=3000 npm start > /tmp/oraculo.log 2>&1 &
           for i in $(seq 1 30); do
             if curl --fail -s http://127.0.0.1:3000/api/health > /tmp/health.json; then break; fi
             sleep 1
           done
+          cat /tmp/health.json
           curl --fail -s http://127.0.0.1:3000/ > /dev/null
           curl --fail -s http://127.0.0.1:3000/estudio.html > /dev/null
           curl --fail -s http://127.0.0.1:3000/assinar.html > /dev/null
