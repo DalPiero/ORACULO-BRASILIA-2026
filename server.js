@@ -52,6 +52,7 @@ app.post('/api/payment-request',async(req,res)=>{
  try{await ensure();const q=await pool.query('INSERT INTO oraculo_payment_requests_33d(email,reference) VALUES($1,$2) ON CONFLICT(email,reference) DO UPDATE SET email=EXCLUDED.email RETURNING id,status',[email,reference]);res.status(202).json({requestId:q.rows[0].id,status:q.rows[0].status,message:'Pedido recebido. A verificação do pagamento será realizada pelo administrador. Nenhum acesso foi liberado.'})}
  catch(e){console.error('Payment request:',e.code||e.name);res.status(503).json({error:'Não foi possível registrar o pedido.'})}
 });
+app.post('/api/admin/verify',(req,res)=>{res.set('Cache-Control','no-store');if(!secretOK(req.get('X-ORACULO-ADMIN')))return res.status(403).json({authenticated:false,error:'Senha administrativa inválida.'});res.json({authenticated:true})});
 app.get('/api/admin/payment-requests',async(req,res)=>{
  if(!secretOK(req.get('X-ORACULO-ADMIN')))return res.status(403).json({error:'Administrador não autorizado.'});
  try{await ensure();const q=await pool.query('SELECT id,email,reference,status,created_at,reviewed_at FROM oraculo_payment_requests_33d ORDER BY created_at DESC LIMIT 500');res.json({requests:q.rows})}catch(e){res.status(503).json({error:'Não foi possível consultar pedidos.'})}
