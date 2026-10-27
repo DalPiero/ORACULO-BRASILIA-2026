@@ -927,18 +927,34 @@ body{background:linear-gradient(180deg,#e8eef4 0%,#f8f6f0 38%,#f2f7f4 100%);colo
 #oraculo-musica{max-width:1000px;margin:24px auto;background:#fff;padding:22px;border-radius:16px;color:#17283b;font:16px/1.5 Segoe UI,Arial,sans-serif}
 #oraculo-musica a{color:#175e89}#oraculo-musica li{padding:5px}
 </style>
-<section id="oraculo-musica"><h2>Repertório histórico: música e tradição maçônica</h2><p>Conheça a história das composições. A reprodução musical depende da disponibilidade e dos direitos de cada gravação; o site não inicia áudio sem autorização do visitante.</p><ol>
-<li>The Master's Song (1723) — História da Ordem</li>
-<li>The Enter'd Apprentice's Song (1722–1723) — Fraternidade e iniciação</li>
-<li>Canções de Naudot (1737) — Expansão europeia</li>
-<li>La Lire Maçonne (1766) — Cultura fraternal</li>
-<li>Lied zur Gesellenreise — Mozart (1785) — Busca da luz</li>
-<li>Die Maurerfreude — Mozart (1785) — Alegria maçônica</li>
-<li>Maurerische Trauermusik — Mozart (1785) — Memória e solenidade</li>
-<li>Die Zauberflöte — Mozart (1791) — Filosofia iniciática</li>
-<li>Kleine Freimaurer-Kantate — Mozart (1791) — União e fraternidade</li>
-<li>Masonic Ritual Music — Sibelius — Música ritual</li>
-</ol><p><a href="https://imslp.org/wiki/Maurerische_Trauermusik%2C_K.477_%28Mozart%2C_Wolfgang_Amadeus%29" target="_blank" rel="noopener noreferrer">Ouvir gravações disponíveis de Mozart e verificar licenças na biblioteca IMSLP</a></p></section>
+<section id="oraculo-musica" aria-labelledby="oraculo-music-title">
+<h2 id="oraculo-music-title">Tradição musical maçônica — repertório histórico</h2>
+<p>Uma faixa do repertório é sorteada ao abrir o site. Se o navegador bloquear a reprodução automática, pressione <strong>Reproduzir</strong>. Escolha outra obra na lista suspensa.</p>
+<label for="oraculo-music-select"><strong>Escolha a composição</strong></label>
+<select id="oraculo-music-select" style="display:block;width:100%;padding:12px;margin:10px 0;border:1px solid #af9b71;border-radius:8px;font:16px Segoe UI,Arial,sans-serif">
+<option value="masters">1 — The Master's Song (1723)</option>
+<option value="apprentice">2 — The Enter'd Apprentice's Song (1722–1723)</option>
+<option value="naudot">3 — Canções de Naudot (1737)</option>
+<option value="lire">4 — La Lire Maçonne (1766)</option>
+<option value="gesellen">5 — Lied zur Gesellenreise — Mozart (1785)</option>
+<option value="freude">6 — Die Maurerfreude — Mozart (1785)</option>
+<option value="trauermusik">7 — Maurerische Trauermusik — Mozart (1785)</option>
+<option value="zauber">8 — Die Zauberflöte — Mozart (1791)</option>
+<option value="kantate">9 — Kleine Freimaurer-Kantate — Mozart (1791)</option>
+<option value="sibelius">10 — Masonic Ritual Music — Sibelius</option>
+</select>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<button type="button" id="oraculo-music-play" class="eixo-consulta">▶ Reproduzir</button>
+<button type="button" id="oraculo-music-pause" class="eixo-consulta">Ⅱ Pausar</button>
+<button type="button" id="oraculo-music-random" class="eixo-consulta">↻ Sortear outra obra</button>
+</div>
+<audio id="oraculo-music-audio" controls preload="none" style="display:block;width:100%;margin:14px 0"></audio>
+<p id="oraculo-music-status" role="status" aria-live="polite"></p>
+<p id="oraculo-music-description" style="font-size:.95rem"></p>
+<p><a id="oraculo-music-source" href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Consultar fonte e licença da gravação</a></p>
+<p style="font-size:.82rem">O catálogo mantém as dez obras solicitadas. A reprodução integral depende de arquivos sonoros disponíveis com licença compatível; gravações não verificadas não são apresentadas como se fossem a obra selecionada.</p>
+</section>
+<script defer src="/oraculo-musica.js"></script>
 <section id="oraculo-admin-inline"><h2>Administração do Oráculo</h2><button type="button" id="oraAdminToggle" aria-expanded="false" aria-controls="oraAdminHidden">Mostrar administração</button><div id="oraAdminHidden" hidden>
 <p>Área exclusiva. A senha é verificada pelo servidor e não é armazenada no navegador.</p><form id="oraAdminLogin"><label for="oraInlinePassword">Senha do administrador:</label><input id="oraInlinePassword" type="password" required minlength="24" autocomplete="off"><button type="submit">Entrar</button><button type="button" id="oraInlineEye" aria-label="Mostrar ou ocultar senha">Mostrar/ocultar senha</button></form>
 <p id="oraInlineMessage" role="status"></p><div id="oraInlinePanel" hidden><button type="button" id="oraInlineRefresh">Atualizar solicitações</button><button type="button" id="oraInlineLogout">Sair</button><div id="oraInlineRequests"></div>
