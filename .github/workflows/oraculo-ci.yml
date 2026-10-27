@@ -21,6 +21,7 @@ jobs:
           node --check public/oraculo-administracao-inline.js
           node --check public/oraculo-musica.js
           node --check public/oraculo-relatorios.js
+          node -e 'const fs=require("fs"); for(const p of ["public/estudio.html","public/admin.html"]){const html=fs.readFileSync(p,"utf8");const scripts=[...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g)];for(const [,code] of scripts){new Function(code)}console.log("Inline JS OK:",p,scripts.length)}'
       - name: Check HTTP health and authentication
         run: |
           PORT=3000 npm start > /tmp/oraculo.log 2>&1 &
